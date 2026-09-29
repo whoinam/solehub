@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SOLEHUB | Premium Shoes Store</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- External CSS File -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top main-navbar">
+    <div class="container">
+
+        <a class="navbar-brand logo" href="#home">
+            Sole<span>Hub</span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#shop">Shop</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#categories">Categories</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Search Bar -->
+            <form class="d-flex search-box me-lg-3 my-3 my-lg-0"
+                  id="searchForm" role="search">
+                <input class="form-control" type="search"
+                       id="searchInput"
+                       placeholder="Search shoes..."
+                       aria-label="Search shoes">
+                <button class="btn search-btn" type="submit"
+                        aria-label="Search">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
+
+            <!-- Navbar Icons -->
+            <div class="nav-icons d-flex align-items-center gap-3">
+                <a href="#shop" aria-label="Wishlist">
+                    <i class="bi bi-heart"></i>
+                </a>
+
+                <a href="#cart" aria-label="Shopping cart">
+                    <i class="bi bi-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- ================= advertisement SECTION ================= -->
+
+<section class="advertisement-section" id="home">
+
+    <div class="advertisement-overlay"></div>
+
+    <div class="container position-relative">
+        <div class="row align-items-center">
+
+            <div class="col-lg-6 advertisement-content">
+
+                <span class="advertisement-tag">
+                    <i class="bi bi-stars"></i>
+                    STEP INTO STYLE
+                </span>
+
+                <h1>
+                    Find Your<br>
+                    Perfect <span>Pair.</span>
+                </h1>
+
+                <p class="advertisement-description">
+                    Discover premium sneakers, everyday essentials
+                    and athletic footwear designed for every journey.
+                </p>
+
+                <div class="advertisement-buttons">
+                    <a href="#shop" class="btn btn-gold">
+                        Shop Collection
+                        <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+
+                    <a href="#categories" class="btn btn-outline-light">
+                        Explore More
+                    </a>
+                </div>
+
+                <div class="advertisement-stats">
+                    <div>
+                        <h4>500+</h4>
+                        <p>Products</p>
+                    </div>
+
+                    <div>
+                        <h4>10K+</h4>
+                        <p>Happy Customers</p>
+                    </div>
+
+                    <div>
+                        <h4>4.9/5</h4>
+                        <p>Customer Rating</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 advertisement-image-box">
+                <div class="advertisement-circle"></div>
+
+                <img
+                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=85"
+                    alt="Premium red sneaker"
+                    class="advertisement-shoe-img">
+
+                <div class="floating-card">
+                    <span class="floating-label">TRENDING NOW</span>
+                    <h5>Street Collection</h5>
+                    <p>Style that moves with you.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="hero-bottom-text">SOLEHUB — WALK YOUR WAY</div>
+</section>
+
+
+<!-- ================= SERVICE FEATURES ================= -->
+
+<section class="service-section">
+    <div class="container">
+        <div class="row g-4">
+
+            <div class="col-6 col-lg-3">
+                <div class="service-item">
+                    <i class="bi bi-truck"></i>
+                    <div>
+                        <h6>Free Shipping</h6>
+                        <p>On orders above ₹999</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="service-item">
+                    <i class="bi bi-shield-check"></i>
+                    <div>
+                        <h6>Secure Payments</h6>
+                        <p>100% secure checkout</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="service-item">
+                    <i class="bi bi-arrow-repeat"></i>
+                    <div>
+                        <h6>Easy Returns</h6>
+                        <p>7-day return policy</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="service-item">
+                    <i class="bi bi-headset"></i>
+                    <div>
+                        <h6>24/7 Support</h6>
+                        <p>We're here to help</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="section-padding" id="categories">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="section-tag">SHOP BY CATEGORY</span>
+            <h2>Find Your Perfect Pair</h2>
+            <p>Explore our wide range of shoes for every style and occasion.</p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Men Category -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <a href="#shop" class="category-card"
+                   data-category="men">
+                    <img
+                        src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80"
+                        alt="Men's sneakers">
+
+                    <div class="category-overlay">
+                        <h3>Men</h3>
+                        <span>Explore Collection
+                            <i class="bi bi-arrow-right"></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Women Category -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <a href="#shop" class="category-card"
+                   data-category="women">
+                    <img
+                        src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=700&q=80"
+                        alt="Women's footwear">
+
+                    <div class="category-overlay">
+                        <h3>Women</h3>
+                        <span>Explore Collection
+                            <i class="bi bi-arrow-right"></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Sports Category -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <a href="#shop" class="category-card"
+                   data-category="sports">
+                    <img
+                        src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=700&q=80"
+                        alt="Sports shoes">
+
+                    <div class="category-overlay">
+                        <h3>Sports</h3>
+                        <span>Explore Collection
+                            <i class="bi bi-arrow-right"></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Kids Category -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <a href="#shop" class="category-card"
+                   data-category="kids">
+                    <img
+                        src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&w=700&q=80"
+                        alt="Kids shoes">
+
+                    <div class="category-overlay">
+                        <h3>Kids</h3>
+                        <span>Explore Collection
+                            <i class="bi bi-arrow-right"></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="section-padding products-section" id="shop">
+
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-end
+                    flex-wrap gap-3 mb-4">
+
+            <div class="section-heading mb-0">
+                <span class="section-tag">OUR COLLECTION</span>
+                <h2>Trending Now</h2>
+                <p>Handpicked styles that are loved by our customers.</p>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    All
+                </button>
+                <button class="filter-btn" data-filter="men">
+                    Men
+                </button>
+                <button class="filter-btn" data-filter="women">
+                    Women
+                </button>
+                <button class="filter-btn" data-filter="sports">
+                    Sports
+                </button>
+                <button class="filter-btn" data-filter="kids">
+                    Kids
+                </button>
+            </div>
+
+        </div>
+
+        <div class="row g-4" id="productGrid">
+
+            <!-- Product 1 -->
+            <div class="col-12 col-sm-6 col-lg-3 product-item"
+                 data-category="men">
+
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <span class="product-badge">BEST SELLER</span>
+
+                        <button class="wishlist-btn"
+                                aria-label="Add to wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80"
+                            alt="Red Nike style sneaker">
+                    </div>
+
+                    <div class="product-info">
+                        <span class="product-category">Men's Sneakers</span>
+                        <h5>Nike Air Max Red</h5>
+
+                        <div class="product-rating">
+                            <span>★★★★★</span>
+                            <small>(4.8)</small>
+                        </div>
+
+                        <div class="product-price">
+                            <strong>₹4,999</strong>
+                            <del>₹6,999</del>
+                            <span>29% OFF</span>
+                        </div>
+
+                        <button class="btn add-cart-btn"
+                                data-name="Nike Air Max Red"
+                                data-price="4999">
+                            <i class="bi bi-bag-plus me-2"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Product 2 -->
+            <div class="col-12 col-sm-6 col-lg-3 product-item"
+                 data-category="men">
+
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <span class="product-badge new-badge">NEW</span>
+
+                        <button class="wishlist-btn"
+                                aria-label="Add to wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=700&q=80"
+                            alt="White casual sneakers">
+                    </div>
+
+                    <div class="product-info">
+                        <span class="product-category">Men's Sneakers</span>
+                        <h5>Urban Classic White</h5>
+
+                        <div class="product-rating">
+                            <span>★★★★★</span>
+                            <small>(4.7)</small>
+                        </div>
+
+                        <div class="product-price">
+                            <strong>₹3,499</strong>
+                            <del>₹4,999</del>
+                            <span>30% OFF</span>
+                        </div>
+
+                        <button class="btn add-cart-btn"
+                                data-name="Urban Classic White"
+                                data-price="3499">
+                            <i class="bi bi-bag-plus me-2"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Product 3 -->
+            <div class="col-12 col-sm-6 col-lg-3 product-item"
+                 data-category="women">
+
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <span class="product-badge sale-badge">SALE</span>
+
+                        <button class="wishlist-btn"
+                                aria-label="Add to wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=700&q=80"
+                            alt="Women's fashion shoes">
+                    </div>
+
+                    <div class="product-info">
+                        <span class="product-category">Women's Fashion</span>
+                        <h5>Rose Luxe Collection</h5>
+
+                        <div class="product-rating">
+                            <span>★★★★★</span>
+                            <small>(4.6)</small>
+                        </div>
+
+                        <div class="product-price">
+                            <strong>₹2,999</strong>
+                            <del>₹4,499</del>
+                            <span>33% OFF</span>
+                        </div>
+
+                        <button class="btn add-cart-btn"
+                                data-name="Rose Luxe Collection"
+                                data-price="2999">
+                            <i class="bi bi-bag-plus me-2"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Product 4 -->
+            <div class="col-12 col-sm-6 col-lg-3 product-item"
+                 data-category="sports">
+
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <span class="product-badge new-badge">NEW</span>
+
+                        <button class="wishlist-btn"
+                                aria-label="Add to wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=700&q=80"
+                            alt="Performance running shoes">
+                    </div>
+
+                    <div class="product-info">
+                        <span class="product-category">Sports Shoes</span>
+                        <h5>Velocity Runner Pro</h5>
+
+                        <div class="product-rating">
+                            <span>★★★★★</span>
+                            <small>(4.9)</small>
+                        </div>
+
+                        <div class="product-price">
+                            <strong>₹5,499</strong>
+                            <del>₹7,499</del>
+                            <span>27% OFF</span>
+                        </div>
+
+                        <button class="btn add-cart-btn"
+                                data-name="Velocity Runner Pro"
+                                data-price="5499">
+                            <i class="bi bi-bag-plus me-2"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Product 5 -->
+            <div class="col-12 col-sm-6 col-lg-3 product-item"
+                 data-category="kids">
+
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <span class="product-badge">POPULAR</span>
+
+                        <button class="wishlist-btn"
+                                aria-label="Add to wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&w=700&q=80"
+                            alt="Kids casual shoes">
+                    </div>
+
+                    <div class="product-info">
+                        <span class="product-category">Kids Collection</span>
+                        <h5>Little Steps Runner</h5>
+
+                        <div class="product-rating">
+                            <span>★★★★★</span>
+                            <small>(4.5)</small>
+                        </div>
+
+                        <div class="product-price">
+                            <strong>₹1,999</strong>
+                            <del>₹2,799</del>
+                            <span>29% OFF</span>
+                        </div>
+
+                        <button class="btn add-cart-btn"
+                                data-name="Little Steps Runner"
+                                data-price="1999">
+                            <i class="bi bi-bag-plus me-2"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Product 6 -->
+            <div class="col-12 col-sm-6 col-lg-3 product-item"
+                 data-category="women">
+
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <span class="product-badge new-badge">NEW</span>
+
+                        <button class="wishlist-btn"
+                                aria-label="Add to wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+
+                        <img
+                           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeyUFf3ix5qTU1jrb1mxpLkVdSS0soCNV-zysNOd-PSA&s=10"
+                            alt="Women's elegant footwear">
+                    </div>
+
+                    <div class="product-info">
+                        <span class="product-category">Women's Collection</span>
+                        <h5>Everyday Elegance</h5>
+
+                        <div class="product-rating">
+                            <span>★★★★★</span>
+                            <small>(4.8)</small>
+                        </div>
+
+                        <div class="product-price">
+                            <strong>₹3,299</strong>
+                            <del>₹4,499</del>
+                            <span>27% OFF</span>
+                        </div>
+
+                        <button class="btn add-cart-btn"
+                                data-name="Everyday Elegance"
+                                data-price="3299">
+                            <i class="bi bi-bag-plus me-2"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            
+<!-- ================= PRODUCT 1 ================= -->
+<div class="col-12 col-sm-6 col-lg-3 product-item"
+     data-category="men">
+
+    <div class="product-card">
+        <div class="product-image">
+            <span class="product-badge sale-badge">SALE</span>
+
+            <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="bi bi-heart"></i>
+            </button>
+
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80"
+                 alt="Red sports sneakers">
+
+        </div>
+
+        <div class="product-info">
+            <span class="product-category">Men's Sports</span>
+            <h5>Air Rush Runner</h5>
+
+            <div class="product-rating">
+                <span>★★★★★</span>
+                <small>(4.8)</small>
+            </div>
+
+            <div class="product-price">
+                <strong>₹3,499</strong>
+                <del>₹4,999</del>
+                <span>30% OFF</span>
+            </div>
+
+            <button class="btn add-cart-btn"
+                    data-name="Air Rush Runner"
+                    data-price="3499">
+                <i class="bi bi-bag-plus me-2"></i>
+                Add to Cart
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= PRODUCT 2 ================= -->
+<div class="col-12 col-sm-6 col-lg-3 product-item"
+     data-category="men">
+
+    <div class="product-card">
+        <div class="product-image">
+            <span class="product-badge sale-badge">SALE</span>
+
+            <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="bi bi-heart"></i>
+            </button>
+
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCAd2isGkppuNGtBaA_PRX8SsfMVJeG73XUMwTCkNQpg&s"
+            alt="Red and white running shoes">
+        </div>
+
+        <div class="product-info">
+            <span class="product-category">Men's Running</span>
+            <h5>Velocity Pro Runner</h5>
+
+            <div class="product-rating">
+                <span>★★★★★</span>
+                <small>(4.6)</small>
+            </div>
+
+            <div class="product-price">
+                <strong>₹2,899</strong>
+                <del>₹4,199</del>
+                <span>31% OFF</span>
+            </div>
+
+            <button class="btn add-cart-btn"
+                    data-name="Velocity Pro Runner"
+                    data-price="2899">
+                <i class="bi bi-bag-plus me-2"></i>
+                Add to Cart
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= PRODUCT 3 ================= -->
+<div class="col-12 col-sm-6 col-lg-3 product-item"
+     data-category="men">
+
+    <div class="product-card">
+        <div class="product-image">
+            <span class="product-badge sale-badge">SALE</span>
+
+            <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="bi bi-heart"></i>
+            </button>
+
+            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=700&q=80"
+                 alt="Classic casual sneakers">
+        </div>
+
+        <div class="product-info">
+            <span class="product-category">Men's Casual</span>
+            <h5>Classic Street Low</h5>
+
+            <div class="product-rating">
+                <span>★★★★★</span>
+                <small>(4.5)</small>
+            </div>
+
+            <div class="product-price">
+                <strong>₹2,499</strong>
+                <del>₹3,499</del>
+                <span>29% OFF</span>
+            </div>
+
+            <button class="btn add-cart-btn"
+                    data-name="Classic Street Low"
+                    data-price="2499">
+                <i class="bi bi-bag-plus me-2"></i>
+                Add to Cart
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= PRODUCT 4 ================= -->
+<div class="col-12 col-sm-6 col-lg-3 product-item"
+     data-category="men">
+
+    <div class="product-card">
+        <div class="product-image">
+            <span class="product-badge sale-badge">SALE</span>
+
+            <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="bi bi-heart"></i>
+            </button>
+
+            <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=700&q=80"
+                 alt="Black and white high top sneakers">
+        </div>
+
+        <div class="product-info">
+            <span class="product-category">Men's Sneakers</span>
+            <h5>Urban High Top</h5>
+
+            <div class="product-rating">
+                <span>★★★★★</span>
+                <small>(4.7)</small>
+            </div>
+
+            <div class="product-price">
+                <strong>₹4,299</strong>
+                <del>₹5,999</del>
+                <span>28% OFF</span>
+            </div>
+
+            <button class="btn add-cart-btn"
+                    data-name="Urban High Top"
+                    data-price="4299">
+                <i class="bi bi-bag-plus me-2"></i>
+                Add to Cart
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= PRODUCT 5 ================= -->
+<div class="col-12 col-sm-6 col-lg-3 product-item"
+     data-category="women">
+
+    <div class="product-card">
+        <div class="product-image">
+            <span class="product-badge sale-badge">SALE</span>
+
+            <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="bi bi-heart"></i>
+            </button>
+
+            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=700&q=80"
+                 alt="Women's fashionable footwear">
+        </div>
+
+        <div class="product-info">
+            <span class="product-category">Women's Fashion</span>
+            <h5>Elegance Walk</h5>
+
+            <div class="product-rating">
+                <span>★★★★★</span>
+                <small>(4.6)</small>
+            </div>
+
+            <div class="product-price">
+                <strong>₹2,799</strong>
+                <del>₹3,999</del>
+                <span>30% OFF</span>
+            </div>
+
+            <button class="btn add-cart-btn"
+                    data-name="Elegance Walk"
+                    data-price="2799">
+                <i class="bi bi-bag-plus me-2"></i>
+                Add to Cart
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= PRODUCT 6 ================= -->
+<div class="col-12 col-sm-6 col-lg-3 product-item"
+     data-category="women">
+
+    <div class="product-card">
+        <div class="product-image">
+            <span class="product-badge sale-badge">SALE</span>
+
+            <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="bi bi-heart"></i>
+            </button>
+
+            <img src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=700&q=80"
+                 alt="Women's casual sneakers">
+        </div>
+
+        <div class="product-info">
+            <span class="product-category">Women's Sneakers</span>
+            <h5>Cloud Comfort</h5>
+
+            <div class="product-rating">
+                <span>★★★★★</span>
+                <small>(4.8)</small>
+            </div>
+
+            <div class="product-price">
+                <strong>₹3,199</strong>
+                <del>₹4,499</del>
+                <span>29% OFF</span>
+            </div>
+
+            <button class="btn add-cart-btn"
+                    data-name="Cloud Comfort"
+                    data-price="3199">
+                <i class="bi bi-bag-plus me-2"></i>
+                Add to Cart
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= PRODUCT 7 ================= -->
+<div class="col-12 col-sm-6 col-lg-3 product-item"
+     data-category="sports">
+
+    <div class="product-card">
+        <div class="product-image">
+            <span class="product-badge sale-badge">SALE</span>
+
+            <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="bi bi-heart"></i>
+            </button>
+
+            <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=700&q=80"
+                 alt="Athletic training sneakers">
+        </div>
+
+        <div class="product-info">
+            <span class="product-category">Sports Training</span>
+            <h5>Power Sprint X</h5>
+
+            <div class="product-rating">
+                <span>★★★★★</span>
+                <small>(4.9)</small>
+            </div>
+
+            <div class="product-price">
+                <strong>₹3,899</strong>
+                <del>₹5,499</del>
+                <span>29% OFF</span>
+            </div>
+
+            <button class="btn add-cart-btn"
+                    data-name="Power Sprint X"
+                    data-price="3899">
+                <i class="bi bi-bag-plus me-2"></i>
+                Add to Cart
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= PRODUCT 8 ================= -->
+<div class="col-12 col-sm-6 col-lg-3 product-item"
+     data-category="sports">
+
+    <div class="product-card">
+        <div class="product-image">
+            <span class="product-badge sale-badge">SALE</span>
+
+            <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="bi bi-heart"></i>
+            </button>
+
+            <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=700&q=80"
+                 alt="Performance running sneakers">
+        </div>
+
+        <div class="product-info">
+            <span class="product-category">Sports Running</span>
+            <h5>Flex Motion Runner</h5>
+
+            <div class="product-rating">
+                <span>★★★★★</span>
+                <small>(4.7)</small>
+            </div>
+
+            <div class="product-price">
+                <strong>₹3,599</strong>
+                <del>₹4,999</del>
+                <span>28% OFF</span>
+            </div>
+
+            <button class="btn add-cart-btn"
+                    data-name="Flex Motion Runner"
+                    data-price="3599">
+                <i class="bi bi-bag-plus me-2"></i>
+                Add to Cart
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= PRODUCT 9 ================= -->
+<div class="col-12 col-sm-6 col-lg-3 product-item"
+     data-category="men">
+
+    <div class="product-card">
+        <div class="product-image">
+            <span class="product-badge sale-badge">SALE</span>
+
+            <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="bi bi-heart"></i>
+            </button>
+
+            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=700&q=80"
+                 alt="Classic canvas sneakers">
+        </div>
+
+        <div class="product-info">
+            <span class="product-category">Men's Casual</span>
+            <h5>Canvas Classic</h5>
+
+            <div class="product-rating">
+                <span>★★★★★</span>
+                <small>(4.4)</small>
+            </div>
+
+            <div class="product-price">
+                <strong>₹1,999</strong>
+                <del>₹2,999</del>
+                <span>33% OFF</span>
+            </div>
+
+            <button class="btn add-cart-btn"
+                    data-name="Canvas Classic"
+                    data-price="1999">
+                <i class="bi bi-bag-plus me-2"></i>
+                Add to Cart
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= PRODUCT 10 ================= -->
+<div class="col-12 col-sm-6 col-lg-3 product-item"
+     data-category="sports">
+
+    <div class="product-card">
+        <div class="product-image">
+            <span class="product-badge sale-badge">SALE</span>
+
+            <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="bi bi-heart"></i>
+            </button>
+
+            <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&w=700&q=80"
+                 alt="Modern athletic sports shoes">
+        </div>
+
+        <div class="product-info">
+            <span class="product-category">Sports Sneakers</span>
+            <h5>Turbo Edge Pro</h5>
+
+            <div class="product-rating">
+                <span>★★★★★</span>
+                <small>(4.8)</small>
+            </div>
+
+            <div class="product-price">
+                <strong>₹4,499</strong>
+                <del>₹6,499</del>
+                <span>31% OFF</span>
+            </div>
+
+            <button class="btn add-cart-btn"
+                    data-name="Turbo Edge Pro"
+                    data-price="4499">
+                <i class="bi bi-bag-plus me-2"></i>
+                Add to Cart
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- ================= PRODUCT 11 ================= -->
+<div class="col-12 col-sm-6 col-lg-3 product-item"
+     data-category="men">
+
+    <div class="product-card">
+
+        <div class="product-image">
+            <span class="product-badge sale-badge">SALE</span>
+
+            <button class="wishlist-btn"
+                    aria-label="Add to wishlist">
+                <i class="bi bi-heart"></i>
+            </button>
+
+            <img
+                src="https://images.unsplash.com/photo-1520256862855-398228c41684?auto=format&fit=crop&w=700&q=80"
+                alt="Premium men's casual sneakers">
+        </div>
+
+        <div class="product-info">
+
+            <span class="product-category">Men's Sneakers</span>
+            <h5>Shadow Strike Pro</h5>
+
+            <div class="product-rating">
+                <span>★★★★★</span>
+                <small>(4.8)</small>
+            </div>
+
+            <div class="product-price">
+                <strong>₹3,799</strong>
+                <del>₹5,499</del>
+                <span>31% OFF</span>
+            </div>
+
+            <button class="btn add-cart-btn"
+                    data-name="Shadow Strike Pro"
+                    data-price="3799">
+                <i class="bi bi-bag-plus me-2"></i>
+                Add to Cart
+            </button>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= PRODUCT 12 ================= -->
+<div class="col-12 col-sm-6 col-lg-3 product-item"
+     data-category="sports">
+
+    <div class="product-card">
+
+        <div class="product-image">
+            <span class="product-badge sale-badge">SALE</span>
+
+            <button class="wishlist-btn"
+                    aria-label="Add to wishlist">
+                <i class="bi bi-heart"></i>
+            </button>
+
+            <img
+                src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&w=700&q=80"
+                alt="Modern sports running sneakers">
+        </div>
+
+        <div class="product-info">
+
+            <span class="product-category">Sports Running</span>
+            <h5>Velocity Max Pro</h5>
+
+            <div class="product-rating">
+                <span>★★★★★</span>
+                <small>(4.7)</small>
+            </div>
+
+            <div class="product-price">
+                <strong>₹4,199</strong>
+                <del>₹5,999</del>
+                <span>30% OFF</span>
+            </div>
+
+            <button class="btn add-cart-btn"
+                    data-name="Velocity Max Pro"
+                    data-price="4199">
+                <i class="bi bi-bag-plus me-2"></i>
+                Add to Cart
+            </button>
+
+        </div>
+    </div>
+</div>
+
+            <!-- Product 7 -->
+            <div class="col-12 col-sm-6 col-lg-3 product-item"
+                 data-category="men">
+
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <span class="product-badge sale-badge">SALE</span>
+
+                        <button class="wishlist-btn"
+                                aria-label="Add to wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=700&q=80"
+                            alt="Black and white street sneakers">
+                    </div>
+
+                    <div class="product-info">
+                        <span class="product-category">Men's Sneakers</span>
+                        <h5>Street Flex High Top</h5>
+
+                        <div class="product-rating">
+                            <span>★★★★★</span>
+                            <small>(4.7)</small>
+                        </div>
+
+                        <div class="product-price">
+                            <strong>₹4,299</strong>
+                            <del>₹5,999</del>
+                            <span>28% OFF</span>
+                        </div>
+
+                        <button class="btn add-cart-btn"
+                                data-name="Street Flex High Top"
+                                data-price="4299">
+                            <i class="bi bi-bag-plus me-2"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Product 8 -->
+            <div class="col-12 col-sm-6 col-lg-3 product-item"
+                 data-category="sports">
+
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <span class="product-badge new-badge">NEW</span>
+
+                        <button class="wishlist-btn"
+                                aria-label="Add to wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=700&q=80"
+                            alt="Lightweight running shoes">
+                    </div>
+
+                    <div class="product-info">
+                        <span class="product-category">Sports Collection</span>
+                        <h5>Air Sprint Max</h5>
+
+                        <div class="product-rating">
+                            <span>★★★★★</span>
+                            <small>(4.8)</small>
+                        </div>
+
+                        <div class="product-price">
+                            <strong>₹3,999</strong>
+                            <del>₹5,499</del>
+                            <span>27% OFF</span>
+                        </div>
+
+                        <button class="btn add-cart-btn"
+                                data-name="Air Sprint Max"
+                                data-price="3999">
+                            <i class="bi bi-bag-plus me-2"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Message displayed when search has no results -->
+        <div class="no-results text-center py-5" id="noResults">
+            <i class="bi bi-search"></i>
+            <h4>No shoes found</h4>
+            <p>Try searching with another name or category.</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= PROMO BANNER ================= -->
+
+<section class="promo-section" id="about">
+
+    <div class="container">
+        <div class="promo-banner">
+
+            <div class="promo-content">
+                <span class="section-tag">LIMITED TIME OFFER</span>
+
+                <h2>Up to 50% Off</h2>
+
+                <p>
+                    Upgrade your shoe game without breaking the bank.
+                    Shop selected styles before they're gone.
+                </p>
+
+                <a href="#shop" class="btn btn-gold">
+                    Shop the Sale
+                    <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+            </div>
+
+            <div class="promo-image">
+                <img
+                    src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=900&q=85"
+                    alt="Exclusive sneaker collection">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= BRANDS ================= -->
+
+<section class="brands-section">
+    <div class="container">
+
+        <div class="section-heading text-center">
+            <span class="section-tag">OUR BRANDS</span>
+            <h2>Brands You Love</h2>
+            <p>Explore styles inspired by the world's leading footwear brands.</p>
+        </div>
+
+        <div class="row align-items-center justify-content-center
+                    text-center g-4 brand-list">
+
+            <div class="col-4 col-md-2">
+                <h3>NIKE</h3>
+            </div>
+
+            <div class="col-4 col-md-2">
+                <h3>adidas</h3>
+            </div>
+
+            <div class="col-4 col-md-2">
+                <h3>PUMA</h3>
+            </div>
+
+            <div class="col-4 col-md-2">
+                <h3>NB</h3>
+            </div>
+
+            <div class="col-4 col-md-2">
+                <h3>SKECHERS</h3>
+            </div>
+
+            <div class="col-4 col-md-2">
+                <h3>Reebok</h3>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter-section" id="contact">
+    <div class="container">
+
+        <div class="newsletter-box">
+
+            <div>
+                <span class="section-tag">STAY IN THE LOOP</span>
+                <h2>Join the SoleHub Family</h2>
+                <p>Get exclusive offers, new arrivals and more.</p>
+            </div>
+
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email"
+                       class="form-control"
+                       id="newsletterEmail"
+                       placeholder="Enter your email address"
+                       aria-label="Email address"
+                       required>
+
+                <button class="btn btn-gold" type="submit">
+                    Subscribe
+                    <i class="bi bi-arrow-right ms-2"></i>
+                </button>
+            </form>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="phone"
+                       class="form-control"
+                       id="newsletterEmail"
+                       placeholder="Enter your phone number"
+                       aria-label="Phone number"
+                       required>
+
+                <button class="btn btn-gold" type="submit">
+                    contact now
+                    <i class="bi bi-arrow-right ms-2"></i>
+                </button>
+            </form>
+
+        </div>
+
+    </div>
+</section>
+<!-- Developer Section -->
+<section class="developer-section" id="developer">
+    <div class="developer-card">
+
+        <!-- Add your photo path in src -->
+        <img
+            src="https://scontent.fdel27-6.fna.fbcdn.net/v/t1.15752-9/745235719_1024833313819276_1489256913287795012_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=9f807c&_nc_ohc=84rmTJGEC5IQ7kNvwEBihPE&_nc_oc=AdopNzCFIcDBOO3pya1dhG47znb2dwfzUAUyV2kBIdzHZrg1RyoFnNrd1i2sZKRDe57SeYfpAub_wH_ACCTipXlr&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fdel27-6.fna&_nc_ss=7a22e&oh=03_Q7cD6gG5gPQP9G0GPfai6CilW8GcEsaUQhmoRgoG8n9kInQqlA&oe=6AE03808"
+            alt="Developer Inam"
+            class="developer-img"
+        >
+
+        <div class="developer-info">
+            <p class="developer-label">MEET THE DEVELOPER</p>
+
+            <h2>Designed & Developed by</h2>
+
+            <h3>Inam</h3>
+
+            <p>
+                The creative mind behind SOLEHUB —
+                bringing style, comfort, and technology
+                together in one footwear shopping experience.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer-section">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+                <a href="#home" class="footer-logo">
+                    Sole<span>Hub</span>
+                </a>
+
+                <p class="footer-description">
+                    Better Shoes. A Brighter You.
+                    Discover your perfect pair and walk with confidence.
+                </p>
+
+                <div class="social-links">
+                    <a href="#contact" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="#contact" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="#contact" aria-label="Twitter">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+
+                    <a href="#contact" aria-label="YouTube">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-2 col-md-6">
+                <h5>Quick Links</h5>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-lg-3 col-md-6">
+                <h5>Customer Service</h5>
+                <ul class="footer-links">
+                    <li><a href="#contact">Shipping Policy</a></li>
+                    <li><a href="#contact">Returns & Refunds</a></li>
+                    <li><a href="#contact">Privacy Policy</a></li>
+                    <li><a href="#contact">FAQs</a></li>
+                    <li><a href="#contact">Help & Support</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h5>Contact Us</h5>
+
+                <ul class="footer-links">
+                    <li>
+                        <i class="bi bi-envelope me-2"></i>
+                        <a href="mailto:support@solehub.example">support@solehub.example</a>
+                    </li>
+
+                    <li>
+                        <i class="bi bi-telephone me-2"></i>
+                        <a href="tel:+917903563802">+91 7903563802</a>
+                    </li>
+
+                    <li>
+                        <i class="bi bi-geo-alt me-2"></i>
+                        New Delhi, India
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <hr class="footer-divider">        $env:Path += ";C:\Program Files\Git\cmd"
+
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 SoleHub. All rights reserved.
+            </p>
+
+            <p>
+                Designed with <i class="bi bi-heart-fill"></i> for shoe lovers.
+            </p>
+        </div>
+
+    </div>
+</footer>
+
+
+<!-- ================= CART TOAST ================= -->
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="cartToast" class="toast text-bg-dark border-0"
+         role="status" aria-live="polite" aria-atomic="true">
+
+        <div class="d-flex">
+            <div class="toast-body" id="toastMessage">
+                Product added to cart!
+            </div>
+
+            <button type="button"
+                    class="btn-close btn-close-white me-2 m-auto"
+                    data-bs-dismiss="toast"
+                    aria-label="Close">
+            </button>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

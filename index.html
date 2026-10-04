@@ -1,1520 +1,2186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Happy 25th Birthday Bharat — A Birthday Surprise</title>
 
-    <title>SOLEHUB | Premium Shoes Store</title>
+<style>
+:root{
+  --bg1:#08030e;
+  --bg2:#18051d;
+  --bg3:#4b123d;
+  --pink:#ff799d;
+  --gold:#ffd78a;
+  --cream:#fff4dc;
+  --glass:rgba(255,255,255,.075);
+  --line:rgba(255,220,170,.35);
+}
 
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-          rel="stylesheet">
+*{
+  box-sizing:border-box;
+}
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+html,body{
+  margin:0;
+  min-height:100%;
+  font-family:Georgia,"Times New Roman",serif;
+  background:#09030d;
+  color:#fff;
+  overflow-x:hidden;
+}
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet">
+body{
+  min-height:100vh;
+}
 
-    <!-- External CSS File -->
-    <link rel="stylesheet" href="index.css">
+button{
+  font:inherit;
+}
+
+#app{
+  position:relative;
+  min-height:100vh;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 34%,rgba(255,102,156,.18),transparent 26%),
+    radial-gradient(circle at 50% 100%,rgba(194,37,107,.25),transparent 45%),
+    linear-gradient(155deg,var(--bg1),var(--bg2) 50%,#24091f);
+}
+
+#stars,
+#confetti{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+}
+
+.star{
+  position:absolute;
+  width:2px;
+  height:2px;
+  background:#fff;
+  border-radius:50%;
+  opacity:.6;
+  animation:twinkle 2.5s ease-in-out infinite;
+}
+
+@keyframes twinkle{
+  50%{
+    opacity:.15;
+    transform:scale(.6);
+  }
+}
+
+.screen{
+  position:absolute;
+  inset:0;
+  min-height:100svh;
+  padding:clamp(28px,6vw,70px) 18px 36px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  visibility:hidden;
+  transform:scale(.985) translateY(18px);
+  transition:
+    opacity .65s ease,
+    transform .75s cubic-bezier(.2,.8,.2,1),
+    visibility .75s;
+}
+
+.screen.active{
+  position:relative;
+  opacity:1;
+  visibility:visible;
+  transform:none;
+  z-index:2;
+}
+
+.inner{
+  width:min(900px,100%);
+  margin:auto;
+  text-align:center;
+  position:relative;
+  z-index:3;
+}
+
+.kicker{
+  font-size:clamp(12px,2.2vw,16px);
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:#f9d5c5;
+  opacity:.88;
+}
+
+.title{
+  margin:10px 0;
+  font-size:clamp(38px,8vw,82px);
+  line-height:.95;
+  color:#fff7df;
+  text-shadow:0 0 25px rgba(255,189,110,.2);
+}
+
+.subtitle{
+  font-size:clamp(14px,2.8vw,20px);
+  color:#ead9dd;
+  line-height:1.55;
+}
+
+.pill-btn{
+  border:1px solid rgba(255,255,255,.2);
+  background:linear-gradient(135deg,#ff9a76,#ffd47e);
+  color:#391322;
+  padding:13px 30px;
+  border-radius:999px;
+  font-weight:800;
+  cursor:pointer;
+  box-shadow:
+    0 0 25px rgba(255,144,106,.25),
+    inset 0 1px 0 rgba(255,255,255,.5);
+  transition:.25s;
+  min-width:180px;
+}
+
+.pill-btn:hover{
+  transform:translateY(-2px) scale(1.02);
+  box-shadow:0 0 35px rgba(255,144,106,.42);
+}
+
+.pill-btn:active{
+  transform:scale(.97);
+}
+
+.hint{
+  margin-top:10px;
+  font-size:12px;
+  color:#dcc9cf;
+  opacity:.75;
+}
+
+.card{
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.09),
+      rgba(255,255,255,.025)
+    );
+  border:1px solid rgba(255,232,211,.32);
+  box-shadow:
+    0 25px 70px rgba(0,0,0,.45),
+    0 0 35px rgba(235,91,145,.13);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+}
+
+.gift-card{
+  width:min(380px,94vw);
+  margin:auto;
+  padding:30px 24px 25px;
+  border-radius:22px;
+}
+
+.gift-icon{
+  font-size:54px;
+  filter:drop-shadow(0 0 15px rgba(255,210,120,.35));
+  animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+  50%{
+    transform:translateY(-8px);
+  }
+}
+
+.script{
+  font-family:"Brush Script MT","Segoe Script",cursive;
+}
+
+.name-script{
+  color:#ffd28a;
+  font-size:clamp(32px,8vw,58px);
+  line-height:1.05;
+}
+
+.small-line{
+  font-size:13px;
+  color:#e8d7dd;
+  margin:10px 0 24px;
+}
+
+.fade-note{
+  font-style:italic;
+  color:#cdbac2;
+  font-size:13px;
+  letter-spacing:.08em;
+}
+
+/* HEART SCREEN */
+
+.heart-stage{
+  width:min(650px,100%);
+  height:min(650px,75vh);
+  min-height:470px;
+  position:relative;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.heart{
+  position:relative;
+  width:105px;
+  height:105px;
+  transform:rotate(-45deg);
+  background:linear-gradient(135deg,#ff8ea7,#df173d);
+  border-radius:18px;
+  box-shadow:0 0 70px rgba(255,55,95,.65);
+  cursor:pointer;
+  animation:heartBeat 1.25s ease-in-out infinite;
+}
+
+.heart:before,
+.heart:after{
+  content:"";
+  position:absolute;
+  width:105px;
+  height:105px;
+  border-radius:50%;
+  background:inherit;
+}
+
+.heart:before{
+  top:-52px;
+  left:0;
+}
+
+.heart:after{
+  left:52px;
+  top:0;
+}
+
+@keyframes heartBeat{
+  0%,100%{
+    transform:rotate(-45deg) scale(1);
+  }
+  50%{
+    transform:rotate(-45deg) scale(1.09);
+  }
+}
+
+.heart:focus-visible{
+  outline:3px solid #fff;
+}
+
+.pull-rope{
+  position:absolute;
+  left:20%;
+  bottom:19%;
+  width:110px;
+  height:120px;
+  cursor:grab;
+  touch-action:none;
+}
+
+.rope{
+  position:absolute;
+  left:12px;
+  top:0;
+  width:3px;
+  height:82px;
+  background:#e9bfae;
+  transform:rotate(-12deg);
+  transform-origin:top;
+  border-radius:3px;
+}
+
+.rope::after{
+  content:"";
+  position:absolute;
+  bottom:-7px;
+  left:-8px;
+  width:19px;
+  height:10px;
+  border:3px solid #e9bfae;
+  border-top:0;
+  border-radius:0 0 14px 14px;
+  transform:rotate(18deg);
+}
+
+.pull-text{
+  position:absolute;
+  bottom:3%;
+  left:0;
+  right:0;
+  font-size:13px;
+  letter-spacing:.25em;
+  color:#d6c2c7;
+}
+
+.intro-copy{
+  position:absolute;
+  top:3%;
+  left:0;
+  right:0;
+  color:#8f5268;
+  font-style:italic;
+  font-size:clamp(18px,4vw,28px);
+}
+
+.heart-stage .spark{
+  position:absolute;
+  width:6px;
+  height:6px;
+  background:#fff2c5;
+  border-radius:50%;
+  box-shadow:0 0 10px #fff;
+  animation:drift 3s infinite;
+}
+
+@keyframes drift{
+  0%{
+    transform:translateY(25px);
+    opacity:0;
+  }
+  30%,70%{
+    opacity:.9;
+  }
+  100%{
+    transform:translateY(-90px);
+    opacity:0;
+  }
+}
+
+.flash{
+  position:fixed;
+  inset:0;
+  background:#fff;
+  opacity:0;
+  pointer-events:none;
+  z-index:50;
+}
+
+.flash.go{
+  animation:flash .7s ease;
+}
+
+@keyframes flash{
+  0%{
+    opacity:0;
+  }
+  35%{
+    opacity:.95;
+  }
+  100%{
+    opacity:0;
+  }
+}
+
+/* CAKE */
+
+.cake-wrap{
+  margin:28px auto;
+  width:240px;
+  position:relative;
+  cursor:pointer;
+}
+
+.cake{
+  position:relative;
+  height:110px;
+  width:220px;
+  margin:auto;
+}
+
+.layer{
+  position:absolute;
+  left:10px;
+  width:200px;
+  height:30px;
+  border-radius:8px;
+  background:linear-gradient(#ffd2d6,#e997a5);
+  box-shadow:
+    inset 0 -5px 0 rgba(126,35,61,.14),
+    0 8px 12px rgba(0,0,0,.3);
+}
+
+.l1{
+  bottom:0;
+}
+
+.l2{
+  bottom:25px;
+  left:18px;
+  width:184px;
+}
+
+.l3{
+  bottom:50px;
+  left:26px;
+  width:168px;
+}
+
+.plate{
+  position:absolute;
+  bottom:-6px;
+  left:0;
+  width:220px;
+  height:6px;
+  border-radius:99px;
+  background:#fff3df;
+  box-shadow:0 0 10px #fff;
+}
+
+.candle{
+  position:absolute;
+  left:105px;
+  bottom:80px;
+  width:13px;
+  height:66px;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      #fff,
+      #fff 8px,
+      #f5bfd0 8px,
+      #f5bfd0 12px
+    );
+  border-radius:8px;
+  z-index:3;
+}
+
+.flame{
+  position:absolute;
+  left:105px;
+  bottom:140px;
+  width:15px;
+  height:28px;
+  border-radius:50% 50% 50% 10%;
+  background:
+    radial-gradient(
+      circle at 55% 65%,
+      #fff 0 18%,
+      #ffd36d 20% 45%,
+      #ff7b43 48% 75%,
+      transparent 78%
+    );
+  filter:drop-shadow(0 0 12px #ffb15e);
+  animation:flicker .12s infinite alternate;
+  z-index:4;
+}
+
+@keyframes flicker{
+  to{
+    transform:scale(.86) translateX(2px);
+  }
+}
+
+/* BALLOONS */
+
+.balloons{
+  display:flex;
+  justify-content:center;
+  gap:28px;
+  align-items:flex-start;
+  min-height:240px;
+  padding-top:25px;
+  flex-wrap:wrap;
+}
+
+.balloon{
+  width:70px;
+  height:92px;
+  border-radius:50% 50% 46% 46%;
+  position:relative;
+  cursor:pointer;
+  box-shadow:
+    inset -13px -12px 20px rgba(0,0,0,.15),
+    inset 12px 8px 20px rgba(255,255,255,.22),
+    0 0 25px rgba(255,255,255,.1);
+  transition:transform .2s;
+}
+
+.balloon:hover{
+  transform:translateY(-7px) scale(1.04);
+}
+
+.balloon::before{
+  content:"";
+  position:absolute;
+  top:12px;
+  left:16px;
+  width:13px;
+  height:20px;
+  border-radius:50%;
+  background:rgba(255,255,255,.48);
+  filter:blur(1px);
+}
+
+.balloon::after{
+  content:"";
+  position:absolute;
+  bottom:-70px;
+  left:50%;
+  width:1px;
+  height:72px;
+  background:#e8d8dc;
+}
+
+.knot{
+  position:absolute;
+  bottom:-5px;
+  left:calc(50% - 4px);
+  width:8px;
+  height:8px;
+  background:inherit;
+  transform:rotate(45deg);
+}
+
+.b1{
+  background:#f79ab5;
+}
+
+.b2{
+  background:#f4c84e;
+}
+
+.b3{
+  background:#4ed6d8;
+}
+
+.b4{
+  background:#ffa96c;
+}
+
+.b5{
+  background:#a899ff;
+}
+
+.popped{
+  animation:pop .4s forwards;
+}
+
+@keyframes pop{
+  30%{
+    transform:scale(1.25);
+  }
+  100%{
+    transform:scale(0);
+    opacity:0;
+  }
+}
+
+.reason-list{
+  display:grid;
+  gap:10px;
+  width:min(650px,94vw);
+  margin:10px auto 0;
+}
+
+.reason{
+  padding:12px 15px;
+  text-align:left;
+  border:1px solid rgba(255,255,255,.5);
+  border-radius:16px;
+  background:rgba(255,255,255,.07);
+  box-shadow:0 0 20px rgba(255,170,120,.1);
+  opacity:0;
+  transform:translateY(12px);
+  animation:rise .5s forwards;
+}
+
+.reason:nth-child(1){
+  border-color:#c5a6ff;
+}
+
+.reason:nth-child(2){
+  border-color:#f0cf6e;
+}
+
+.reason:nth-child(3){
+  border-color:#ff9da8;
+}
+
+.reason:nth-child(4){
+  border-color:#72e8e6;
+}
+
+.reason:nth-child(5){
+  border-color:#f5a76e;
+}
+
+.reason .tag{
+  display:inline-block;
+  padding:3px 9px;
+  border-radius:999px;
+  background:rgba(255,209,107,.15);
+  color:#ffd878;
+  font:700 10px Arial;
+  letter-spacing:.1em;
+}
+
+.reason p{
+  margin:6px 0 0;
+  font-size:15px;
+  font-weight:700;
+}
+
+@keyframes rise{
+  to{
+    opacity:1;
+    transform:none;
+  }
+}
+
+/* MEMORY */
+
+.memory{
+  width:min(760px,96vw);
+  margin:20px auto;
+}
+
+.polaroids{
+  display:flex;
+  gap:15px;
+  overflow-x:auto;
+  padding:15px 5px 20px;
+  scroll-snap-type:x mandatory;
+  scrollbar-width:none;
+}
+
+.polaroids::-webkit-scrollbar{
+  display:none;
+}
+
+.polaroid{
+  flex:0 0 min(330px,72vw);
+  background:#f7f1e7;
+  padding:12px 12px 25px;
+  color:#5b4c50;
+  transform:rotate(-1.5deg);
+  box-shadow:0 18px 35px rgba(0,0,0,.35);
+  scroll-snap-align:center;
+  position:relative;
+}
+
+.polaroid:nth-child(even){
+  transform:rotate(1.5deg);
+}
+
+.photo{
+  height:270px;
+  border:1px solid #d8c8bd;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 25% 35%,#f8b7c5 0 9%,transparent 10%),
+    radial-gradient(circle at 75% 40%,#ef6e79 0 8%,transparent 9%),
+    linear-gradient(135deg,#ffe5dc,#c5d6cf 48%,#b97f77);
+}
+
+.photo::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(ellipse at 35% 48%,#2c2b31 0 10%,transparent 11%),
+    radial-gradient(ellipse at 64% 50%,#d7b1a4 0 9%,transparent 10%),
+    linear-gradient(180deg,transparent 55%,rgba(80,55,65,.25));
+}
+
+.photo.two{
+  background:linear-gradient(135deg,#d8e3e0,#efc8b2 52%,#7ca8a1);
+}
+
+.photo.three{
+  background:linear-gradient(135deg,#d6c5ed,#f6d2ba 45%,#8c6b7b);
+}
+
+.memory-photo{
+  width:100%;
+  height:270px;
+  display:block;
+  object-fit:cover;
+  border:1px solid #d8c8bd;
+}
+
+@media(max-width:600px){
+  .memory-photo{
+    height:245px;
+  }
+}
+
+.caption{
+  font-size:14px;
+  margin-top:9px;
+  font-style:italic;
+}
+
+.dots{
+  display:flex;
+  justify-content:center;
+  gap:7px;
+  margin:2px 0 15px;
+}
+
+.dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#7d566b;
+}
+
+.dot.active{
+  background:#ffd27a;
+  box-shadow:0 0 8px #ffd27a;
+}
+
+/* ENVELOPE */
+
+.envelope{
+  width:min(500px,92vw);
+  height:285px;
+  margin:25px auto;
+  position:relative;
+  cursor:pointer;
+  filter:drop-shadow(0 20px 30px rgba(0,0,0,.35));
+}
+
+.env-body{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(145deg,#ffe39a,#d9a83d);
+  border:2px solid #f6d67d;
+  box-shadow:0 0 35px rgba(255,202,93,.22);
+}
+
+.env-body:before,
+.env-body:after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  width:0;
+  height:0;
+  border-style:solid;
+  z-index:2;
+}
+
+.env-body:before{
+  left:0;
+  border-width:0 0 185px 250px;
+  border-color:transparent transparent #e2b657 transparent;
+}
+
+.env-body:after{
+  right:0;
+  border-width:185px 0 0 250px;
+  border-color:transparent transparent transparent #c99b40;
+}
+
+.flap{
+  position:absolute;
+  top:0;
+  left:0;
+  width:0;
+  height:0;
+  border-left:250px solid transparent;
+  border-right:250px solid transparent;
+  border-top:145px solid #f0ca6c;
+  transform-origin:top;
+  transition:transform .8s cubic-bezier(.2,.8,.2,1);
+  z-index:4;
+}
+
+.seal{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  background:
+    radial-gradient(
+      circle,
+      #fff8dc 0 35%,
+      #e6c66b 38% 60%,
+      #fff 62%
+    );
+  color:#8a6330;
+  display:grid;
+  place-items:center;
+  z-index:6;
+  box-shadow:0 0 20px rgba(255,255,255,.55);
+}
+
+.envelope.open .flap{
+  transform:rotateX(180deg);
+}
+
+/* LETTER */
+
+.letter{
+  width:min(700px,94vw);
+  padding:28px 25px 22px;
+  background:linear-gradient(#fffdf5,#f4ecdd);
+  color:#57494b;
+  border-radius:10px;
+  box-shadow:
+    0 25px 70px rgba(0,0,0,.45),
+    0 0 35px rgba(255,190,95,.18);
+  text-align:left;
+  animation:paperIn .8s cubic-bezier(.2,.8,.2,1);
+}
+
+@keyframes paperIn{
+  from{
+    transform:scale(.85) translateY(20px);
+    opacity:0;
+  }
+  to{
+    transform:none;
+    opacity:1;
+  }
+}
+
+.letter h3{
+  font-family:"Brush Script MT","Segoe Script",cursive;
+  font-size:31px;
+  font-weight:500;
+  margin:0 0 10px;
+}
+
+.letter hr{
+  border:0;
+  border-top:1px solid #d9cdbd;
+}
+
+.letter p{
+  font-family:"Trebuchet MS",Arial,sans-serif;
+  font-size:15px;
+  line-height:1.8;
+}
+
+.signature{
+  text-align:right;
+  font-family:"Brush Script MT","Segoe Script",cursive;
+  font-size:22px;
+}
+
+/* FINAL */
+
+.final .title{
+  font-family:Georgia,serif;
+  text-transform:uppercase;
+  font-size:clamp(42px,9vw,82px);
+  letter-spacing:.03em;
+}
+
+.final-name{
+  font-size:clamp(48px,11vw,96px);
+  color:#ffc85f;
+  text-shadow:0 0 20px rgba(255,190,65,.25);
+}
+
+.sparkle{
+  position:absolute;
+  width:5px;
+  height:5px;
+  background:#ffe4a5;
+  box-shadow:0 0 12px #fff3c7;
+  transform:rotate(45deg);
+  animation:twinkle 2s infinite;
+}
+
+.firework{
+  position:absolute;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  animation:boom 1.7s ease-out infinite;
+}
+
+.firework i{
+  position:absolute;
+  width:4px;
+  height:90px;
+  background:linear-gradient(transparent,#ffd27b,transparent);
+  left:2px;
+  top:-43px;
+  transform-origin:50% 100%;
+  border-radius:50%;
+}
+
+.firework i:nth-child(1){
+  transform:rotate(0deg);
+}
+
+.firework i:nth-child(2){
+  transform:rotate(45deg);
+}
+
+.firework i:nth-child(3){
+  transform:rotate(90deg);
+}
+
+.firework i:nth-child(4){
+  transform:rotate(135deg);
+}
+
+@keyframes boom{
+  0%,100%{
+    transform:scale(.2);
+    opacity:0;
+  }
+  25%{
+    opacity:1;
+  }
+  65%{
+    transform:scale(1);
+    opacity:.7;
+  }
+  90%{
+    opacity:0;
+  }
+}
+
+.conf{
+  position:fixed;
+  width:8px;
+  height:13px;
+  border-radius:2px;
+  z-index:60;
+  pointer-events:none;
+  animation:fall 2.8s linear forwards;
+}
+
+@keyframes fall{
+  to{
+    transform:
+      translate3d(var(--x),105vh,0)
+      rotate(720deg);
+    opacity:.1;
+  }
+}
+
+.nav-row{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:22px;
+}
+
+.hidden{
+  display:none!important;
+}
+
+.progress{
+  position:fixed;
+  top:12px;
+  left:50%;
+  transform:translateX(-50%);
+  width:min(420px,70vw);
+  height:3px;
+  background:rgba(255,255,255,.1);
+  border-radius:99px;
+  z-index:20;
+}
+
+.progress i{
+  display:block;
+  height:100%;
+  width:0;
+  background:linear-gradient(90deg,#ff8e9d,#ffd777);
+  border-radius:99px;
+  transition:.6s;
+}
+
+.tap{
+  font-size:12px;
+  color:#d8c6cb;
+  margin-top:13px;
+}
+
+@media(max-width:600px){
+
+  .screen{
+    padding-top:42px;
+  }
+
+  .heart-stage{
+    min-height:520px;
+  }
+
+  .pull-rope{
+    left:10%;
+    bottom:18%;
+  }
+
+  .balloons{
+    gap:18px;
+  }
+
+  .balloon{
+    width:62px;
+    height:82px;
+  }
+
+  .polaroid{
+    flex-basis:78vw;
+  }
+
+  .photo{
+    height:245px;
+  }
+
+  .envelope{
+    height:230px;
+  }
+
+  .env-body:before{
+    border-width:0 0 145px 46vw;
+  }
+
+  .env-body:after{
+    border-width:145px 0 0 46vw;
+  }
+
+  .flap{
+    border-left-width:46vw;
+    border-right-width:46vw;
+    border-top-width:120px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  *,
+  *:before,
+  *:after{
+    animation-duration:.001ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+    transition-duration:.001ms!important;
+  }
+}
+</style>
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<div id="app">
 
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top main-navbar">
-    <div class="container">
+  <div id="stars"></div>
+  <div id="confetti"></div>
+  <div class="flash" id="flash"></div>
 
-        <a class="navbar-brand logo" href="#home">
-            Sole<span>Hub</span>
-        </a>
+  <div class="progress">
+    <i id="progressBar"></i>
+  </div>
 
-        <!-- Mobile Menu Button -->
-        <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse" data-bs-target="#navbarMenu"
-                aria-controls="navbarMenu" aria-expanded="false"
-                aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+
+  <!-- SCREEN 1 -->
+
+  <section class="screen active" id="s0">
+
+    <div class="inner">
+
+      <div class="gift-card card">
+
+        <div class="gift-icon">🎁</div>
+
+        <div class="kicker">
+          A surprise for Bharat 🎂
+        </div>
+
+        <div class="name-script script" data-name>
+          NAME
+        </div>
+
+        <div class="small-line">
+          <span data-sender>Shubham</span>
+          made this — just for you.
+        </div>
+
+        <button class="pill-btn" id="unwrap">
+          Unwrap it ✨
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarMenu">
-
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#home">Home</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#shop">Shop</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#categories">Categories</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
-
-            <!-- Search Bar -->
-            <form class="d-flex search-box me-lg-3 my-3 my-lg-0"
-                  id="searchForm" role="search">
-                <input class="form-control" type="search"
-                       id="searchInput"
-                       placeholder="Search shoes..."
-                       aria-label="Search shoes">
-                <button class="btn search-btn" type="submit"
-                        aria-label="Search">
-                    <i class="bi bi-search"></i>
-                </button>
-            </form>
-
-            <!-- Navbar Icons -->
-            <div class="nav-icons d-flex align-items-center gap-3">
-                <a href="#shop" aria-label="Wishlist">
-                    <i class="bi bi-heart"></i>
-                </a>
-
-                <a href="#cart" aria-label="Shopping cart">
-                    <i class="bi bi-bag"></i>
-                    <span class="cart-count" id="cartCount">0</span>
-                </a>
-            </div>
-
+        <div class="hint">
+          🔊 Sound on for the full magic
         </div>
-    </div>
-</nav>
 
+      </div>
 
-<!-- ================= advertisement SECTION ================= -->
-
-<section class="advertisement-section" id="home">
-
-    <div class="advertisement-overlay"></div>
-
-    <div class="container position-relative">
-        <div class="row align-items-center">
-
-            <div class="col-lg-6 advertisement-content">
-
-                <span class="advertisement-tag">
-                    <i class="bi bi-stars"></i>
-                    STEP INTO STYLE
-                </span>
-
-                <h1>
-                    Find Your<br>
-                    Perfect <span>Pair.</span>
-                </h1>
-
-                <p class="advertisement-description">
-                    Discover premium sneakers, everyday essentials
-                    and athletic footwear designed for every journey.
-                </p>
-
-                <div class="advertisement-buttons">
-                    <a href="#shop" class="btn btn-gold">
-                        Shop Collection
-                        <i class="bi bi-arrow-right ms-2"></i>
-                    </a>
-
-                    <a href="#categories" class="btn btn-outline-light">
-                        Explore More
-                    </a>
-                </div>
-
-                <div class="advertisement-stats">
-                    <div>
-                        <h4>500+</h4>
-                        <p>Products</p>
-                    </div>
-
-                    <div>
-                        <h4>10K+</h4>
-                        <p>Happy Customers</p>
-                    </div>
-
-                    <div>
-                        <h4>4.9/5</h4>
-                        <p>Customer Rating</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-lg-6 advertisement-image-box">
-                <div class="advertisement-circle"></div>
-
-                <img
-                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=85"
-                    alt="Premium red sneaker"
-                    class="advertisement-shoe-img">
-
-                <div class="floating-card">
-                    <span class="floating-label">TRENDING NOW</span>
-                    <h5>Street Collection</h5>
-                    <p>Style that moves with you.</p>
-                </div>
-            </div>
-
-        </div>
     </div>
 
-    <div class="hero-bottom-text">SOLEHUB — WALK YOUR WAY</div>
-</section>
+  </section>
 
 
-<!-- ================= SERVICE FEATURES ================= -->
+  <!-- SCREEN 2 -->
 
-<section class="service-section">
-    <div class="container">
-        <div class="row g-4">
+  <section class="screen" id="s1">
 
-            <div class="col-6 col-lg-3">
-                <div class="service-item">
-                    <i class="bi bi-truck"></i>
-                    <div>
-                        <h6>Free Shipping</h6>
-                        <p>On orders above ₹999</p>
-                    </div>
-                </div>
-            </div>
+    <div class="inner">
 
-            <div class="col-6 col-lg-3">
-                <div class="service-item">
-                    <i class="bi bi-shield-check"></i>
-                    <div>
-                        <h6>Secure Payments</h6>
-                        <p>100% secure checkout</p>
-                    </div>
-                </div>
-            </div>
+      <div class="heart-stage" id="pullStage">
 
-            <div class="col-6 col-lg-3">
-                <div class="service-item">
-                    <i class="bi bi-arrow-repeat"></i>
-                    <div>
-                        <h6>Easy Returns</h6>
-                        <p>7-day return policy</p>
-                    </div>
-                </div>
-            </div>
+        <div class="intro-copy">
+          a little something, for you
+        </div>
 
-            <div class="col-6 col-lg-3">
-                <div class="service-item">
-                    <i class="bi bi-headset"></i>
-                    <div>
-                        <h6>24/7 Support</h6>
-                        <p>We're here to help</p>
-                    </div>
-                </div>
-            </div>
+        <span
+          class="spark"
+          style="left:18%;top:30%;animation-delay:.2s">
+        </span>
+
+        <span
+          class="spark"
+          style="left:78%;top:24%;animation-delay:1.2s">
+        </span>
+
+        <span
+          class="spark"
+          style="left:70%;top:62%;animation-delay:.7s">
+        </span>
+
+        <div
+          class="heart"
+          id="bigHeart"
+          aria-label="Heart">
+        </div>
+
+        <div
+          class="pull-rope"
+          id="rope"
+          aria-label="Pull and release">
+
+          <div class="rope"></div>
 
         </div>
+
+        <div class="pull-text">
+          PULL &amp; RELEASE
+        </div>
+
+      </div>
+
     </div>
-</section>
+
+  </section>
 
 
-<!-- ================= CATEGORIES ================= -->
+  <!-- SCREEN 3 -->
 
-<section class="section-padding" id="categories">
+  <section class="screen" id="s2">
 
-    <div class="container">
+    <div class="inner">
 
-        <div class="section-heading">
-            <span class="section-tag">SHOP BY CATEGORY</span>
-            <h2>Find Your Perfect Pair</h2>
-            <p>Explore our wide range of shoes for every style and occasion.</p>
-        </div>
+      <div class="kicker">
+        Something sweet is coming...
+      </div>
 
-        <div class="row g-4">
+      <h2
+        class="title"
+        style="font-size:clamp(30px,7vw,60px)">
+        First things first 🎂
+      </h2>
 
-            <!-- Men Category -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <a href="#shop" class="category-card"
-                   data-category="men">
-                    <img
-                        src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80"
-                        alt="Men's sneakers">
+      <div
+        class="cake-wrap"
+        id="cake">
 
-                    <div class="category-overlay">
-                        <h3>Men</h3>
-                        <span>Explore Collection
-                            <i class="bi bi-arrow-right"></i>
-                        </span>
-                    </div>
-                </a>
-            </div>
+        <div class="cake">
 
-            <!-- Women Category -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <a href="#shop" class="category-card"
-                   data-category="women">
-                    <img
-                        src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=700&q=80"
-                        alt="Women's footwear">
+          <div class="layer l1"></div>
+          <div class="layer l2"></div>
+          <div class="layer l3"></div>
 
-                    <div class="category-overlay">
-                        <h3>Women</h3>
-                        <span>Explore Collection
-                            <i class="bi bi-arrow-right"></i>
-                        </span>
-                    </div>
-                </a>
-            </div>
+          <div class="plate"></div>
 
-            <!-- Sports Category -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <a href="#shop" class="category-card"
-                   data-category="sports">
-                    <img
-                        src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=700&q=80"
-                        alt="Sports shoes">
+          <div class="candle"></div>
 
-                    <div class="category-overlay">
-                        <h3>Sports</h3>
-                        <span>Explore Collection
-                            <i class="bi bi-arrow-right"></i>
-                        </span>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Kids Category -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <a href="#shop" class="category-card"
-                   data-category="kids">
-                    <img
-                        src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&w=700&q=80"
-                        alt="Kids shoes">
-
-                    <div class="category-overlay">
-                        <h3>Kids</h3>
-                        <span>Explore Collection
-                            <i class="bi bi-arrow-right"></i>
-                        </span>
-                    </div>
-                </a>
-            </div>
+          <div class="flame"></div>
 
         </div>
+
+      </div>
+
+      <div class="subtitle">
+        Baking something sweet...
+      </div>
+
+      <div class="tap">
+        Tap the cake to keep going
+      </div>
+
     </div>
-</section>
+
+  </section>
 
 
-<!-- ================= PRODUCTS ================= -->
+  <!-- SCREEN 4 -->
 
-<section class="section-padding products-section" id="shop">
+  <section class="screen" id="s3">
 
-    <div class="container">
+    <div class="inner">
 
-        <div class="d-flex justify-content-between align-items-end
-                    flex-wrap gap-3 mb-4">
+      <h2
+        class="title"
+        style="font-size:clamp(29px,7vw,56px)">
+        Pop the balloons 🎈
+      </h2>
 
-            <div class="section-heading mb-0">
-                <span class="section-tag">OUR COLLECTION</span>
-                <h2>Trending Now</h2>
-                <p>Handpicked styles that are loved by our customers.</p>
-            </div>
+      <p class="subtitle">
+        5 balloons. Each one holds a reason you're loved.
+        Pop them all 💕
+      </p>
 
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">
-                    All
-                </button>
-                <button class="filter-btn" data-filter="men">
-                    Men
-                </button>
-                <button class="filter-btn" data-filter="women">
-                    Women
-                </button>
-                <button class="filter-btn" data-filter="sports">
-                    Sports
-                </button>
-                <button class="filter-btn" data-filter="kids">
-                    Kids
-                </button>
-            </div>
+      <div class="balloons" id="balloons">
 
+        <div
+          class="balloon b1"
+          data-reason="Nobody listens the way you do 🫂">
+          <span class="knot"></span>
         </div>
 
-        <div class="row g-4" id="productGrid">
-
-            <!-- Product 1 -->
-            <div class="col-12 col-sm-6 col-lg-3 product-item"
-                 data-category="men">
-
-                <div class="product-card">
-
-                    <div class="product-image">
-                        <span class="product-badge">BEST SELLER</span>
-
-                        <button class="wishlist-btn"
-                                aria-label="Add to wishlist">
-                            <i class="bi bi-heart"></i>
-                        </button>
-
-                        <img
-                            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80"
-                            alt="Red Nike style sneaker">
-                    </div>
-
-                    <div class="product-info">
-                        <span class="product-category">Men's Sneakers</span>
-                        <h5>Nike Air Max Red</h5>
-
-                        <div class="product-rating">
-                            <span>★★★★★</span>
-                            <small>(4.8)</small>
-                        </div>
-
-                        <div class="product-price">
-                            <strong>₹4,999</strong>
-                            <del>₹6,999</del>
-                            <span>29% OFF</span>
-                        </div>
-
-                        <button class="btn add-cart-btn"
-                                data-name="Nike Air Max Red"
-                                data-price="4999">
-                            <i class="bi bi-bag-plus me-2"></i>
-                            Add to Cart
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <!-- Product 2 -->
-            <div class="col-12 col-sm-6 col-lg-3 product-item"
-                 data-category="men">
-
-                <div class="product-card">
-
-                    <div class="product-image">
-                        <span class="product-badge new-badge">NEW</span>
-
-                        <button class="wishlist-btn"
-                                aria-label="Add to wishlist">
-                            <i class="bi bi-heart"></i>
-                        </button>
-
-                        <img
-                            src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=700&q=80"
-                            alt="White casual sneakers">
-                    </div>
-
-                    <div class="product-info">
-                        <span class="product-category">Men's Sneakers</span>
-                        <h5>Urban Classic White</h5>
-
-                        <div class="product-rating">
-                            <span>★★★★★</span>
-                            <small>(4.7)</small>
-                        </div>
-
-                        <div class="product-price">
-                            <strong>₹3,499</strong>
-                            <del>₹4,999</del>
-                            <span>30% OFF</span>
-                        </div>
-
-                        <button class="btn add-cart-btn"
-                                data-name="Urban Classic White"
-                                data-price="3499">
-                            <i class="bi bi-bag-plus me-2"></i>
-                            Add to Cart
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <!-- Product 3 -->
-            <div class="col-12 col-sm-6 col-lg-3 product-item"
-                 data-category="women">
-
-                <div class="product-card">
-
-                    <div class="product-image">
-                        <span class="product-badge sale-badge">SALE</span>
-
-                        <button class="wishlist-btn"
-                                aria-label="Add to wishlist">
-                            <i class="bi bi-heart"></i>
-                        </button>
-
-                        <img
-                            src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=700&q=80"
-                            alt="Women's fashion shoes">
-                    </div>
-
-                    <div class="product-info">
-                        <span class="product-category">Women's Fashion</span>
-                        <h5>Rose Luxe Collection</h5>
-
-                        <div class="product-rating">
-                            <span>★★★★★</span>
-                            <small>(4.6)</small>
-                        </div>
-
-                        <div class="product-price">
-                            <strong>₹2,999</strong>
-                            <del>₹4,499</del>
-                            <span>33% OFF</span>
-                        </div>
-
-                        <button class="btn add-cart-btn"
-                                data-name="Rose Luxe Collection"
-                                data-price="2999">
-                            <i class="bi bi-bag-plus me-2"></i>
-                            Add to Cart
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <!-- Product 4 -->
-            <div class="col-12 col-sm-6 col-lg-3 product-item"
-                 data-category="sports">
-
-                <div class="product-card">
-
-                    <div class="product-image">
-                        <span class="product-badge new-badge">NEW</span>
-
-                        <button class="wishlist-btn"
-                                aria-label="Add to wishlist">
-                            <i class="bi bi-heart"></i>
-                        </button>
-
-                        <img
-                            src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=700&q=80"
-                            alt="Performance running shoes">
-                    </div>
-
-                    <div class="product-info">
-                        <span class="product-category">Sports Shoes</span>
-                        <h5>Velocity Runner Pro</h5>
-
-                        <div class="product-rating">
-                            <span>★★★★★</span>
-                            <small>(4.9)</small>
-                        </div>
-
-                        <div class="product-price">
-                            <strong>₹5,499</strong>
-                            <del>₹7,499</del>
-                            <span>27% OFF</span>
-                        </div>
-
-                        <button class="btn add-cart-btn"
-                                data-name="Velocity Runner Pro"
-                                data-price="5499">
-                            <i class="bi bi-bag-plus me-2"></i>
-                            Add to Cart
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <!-- Product 5 -->
-            <div class="col-12 col-sm-6 col-lg-3 product-item"
-                 data-category="kids">
-
-                <div class="product-card">
-
-                    <div class="product-image">
-                        <span class="product-badge">POPULAR</span>
-
-                        <button class="wishlist-btn"
-                                aria-label="Add to wishlist">
-                            <i class="bi bi-heart"></i>
-                        </button>
-
-                        <img
-                            src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&w=700&q=80"
-                            alt="Kids casual shoes">
-                    </div>
-
-                    <div class="product-info">
-                        <span class="product-category">Kids Collection</span>
-                        <h5>Little Steps Runner</h5>
-
-                        <div class="product-rating">
-                            <span>★★★★★</span>
-                            <small>(4.5)</small>
-                        </div>
-
-                        <div class="product-price">
-                            <strong>₹1,999</strong>
-                            <del>₹2,799</del>
-                            <span>29% OFF</span>
-                        </div>
-
-                        <button class="btn add-cart-btn"
-                                data-name="Little Steps Runner"
-                                data-price="1999">
-                            <i class="bi bi-bag-plus me-2"></i>
-                            Add to Cart
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <!-- Product 6 -->
-            <div class="col-12 col-sm-6 col-lg-3 product-item"
-                 data-category="women">
-
-                <div class="product-card">
-
-                    <div class="product-image">
-                        <span class="product-badge new-badge">NEW</span>
-
-                        <button class="wishlist-btn"
-                                aria-label="Add to wishlist">
-                            <i class="bi bi-heart"></i>
-                        </button>
-
-                        <img
-                           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeyUFf3ix5qTU1jrb1mxpLkVdSS0soCNV-zysNOd-PSA&s=10"
-                            alt="Women's elegant footwear">
-                    </div>
-
-                    <div class="product-info">
-                        <span class="product-category">Women's Collection</span>
-                        <h5>Everyday Elegance</h5>
-
-                        <div class="product-rating">
-                            <span>★★★★★</span>
-                            <small>(4.8)</small>
-                        </div>
-
-                        <div class="product-price">
-                            <strong>₹3,299</strong>
-                            <del>₹4,499</del>
-                            <span>27% OFF</span>
-                        </div>
-
-                        <button class="btn add-cart-btn"
-                                data-name="Everyday Elegance"
-                                data-price="3299">
-                            <i class="bi bi-bag-plus me-2"></i>
-                            Add to Cart
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-
-            
-<!-- ================= PRODUCT 1 ================= -->
-<div class="col-12 col-sm-6 col-lg-3 product-item"
-     data-category="men">
-
-    <div class="product-card">
-        <div class="product-image">
-            <span class="product-badge sale-badge">SALE</span>
-
-            <button class="wishlist-btn" aria-label="Add to wishlist">
-                <i class="bi bi-heart"></i>
-            </button>
-
-            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80"
-                 alt="Red sports sneakers">
-
+        <div
+          class="balloon b2"
+          data-reason="You make bad days feel lighter 😊">
+          <span class="knot"></span>
         </div>
 
-        <div class="product-info">
-            <span class="product-category">Men's Sports</span>
-            <h5>Air Rush Runner</h5>
-
-            <div class="product-rating">
-                <span>★★★★★</span>
-                <small>(4.8)</small>
-            </div>
-
-            <div class="product-price">
-                <strong>₹3,499</strong>
-                <del>₹4,999</del>
-                <span>30% OFF</span>
-            </div>
-
-            <button class="btn add-cart-btn"
-                    data-name="Air Rush Runner"
-                    data-price="3499">
-                <i class="bi bi-bag-plus me-2"></i>
-                Add to Cart
-            </button>
+        <div
+          class="balloon b3"
+          data-reason="You make normal days feel special ❤️">
+          <span class="knot"></span>
         </div>
+
+        <div
+          class="balloon b4"
+          data-reason="You always know what to say ✨">
+          <span class="knot"></span>
+        </div>
+
+        <div
+          class="balloon b5"
+          data-reason="You believed in me before I did 💛">
+          <span class="knot"></span>
+        </div>
+
+      </div>
+
+      <div
+        class="reason-list"
+        id="reasonList">
+      </div>
+
+      <div
+        class="nav-row hidden"
+        id="balloonNext">
+
+        <button class="pill-btn">
+          Keep going →
+        </button>
+
+      </div>
+
     </div>
+
+  </section>
+
+
+  <!-- SCREEN 5 -->
+
+  <section class="screen" id="s4">
+
+    <div class="inner">
+
+      <h2
+        class="title"
+        style="font-size:clamp(28px,6vw,54px)">
+        A walk down memory lane
+      </h2>
+
+      <p class="subtitle">
+        swipe through 📸
+      </p>
+
+      <div class="memory">
+
+        <div
+          class="polaroids"
+          id="memoryRail">
+
+          <article class="polaroid">
+            <img class="memory-photo" src="https://scontent.fdel1-4.fna.fbcdn.net/v/t1.15752-9/831183341_4384756311738901_8803727171519769939_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=fc17b8&_nc_ohc=ACIpk_wHqwgQ7kNvwHYnL1_&_nc_oc=AdoryFEhhWqom2krtjgiEU71oLl74kuIf0bHKstx2hsJI8h9kJLpBRgdHChBLSqwQKr-ieKp4OvlP3ZURv4CcqUj&_nc_zt=23&_nc_ht=scontent.fdel1-4.fna&_nc_ss=7b6a8&oh=03_Q7cD6gHb8qA3r2oJhbYTt6ldtcWCs6XPeksHGazKEz0gm2SlRg&oe=6AE94D20">
+            <div class="caption">Bharat — a moment worth remembering ✨</div>
+          </article>
+
+          <article class="polaroid">
+            <img class="memory-photo" src="https://scontent.fdel1-7.fna.fbcdn.net/v/t1.15752-9/836713599_1114951374450294_8099400190025980442_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=9f807c&_nc_ohc=fWDuZuU0fRoQ7kNvwGnbiHY&_nc_oc=AdqZFhCbO09w3oHVVp2gY_1q-4b38f4-a_ZIhVB4Bgxm26RfF09QCdOy7PAU4b4Sb09D9VIZSuRMpxhUjH6GWkXs&_nc_zt=23&_nc_ht=scontent.fdel1-7.fna&_nc_ss=7b6a8&oh=03_Q7cD6gE_4qsw_sbiV1OmmfcJaDa2NNsmkOXpA61kB2TFaGF0Tg&oe=6AE949AD">
+            <div class="caption">25 years of memories, smiles and stories 💫</div>
+          </article>
+
+          <article class="polaroid">
+            <img class="memory-photo" src="https://scontent.fdel27-2.fna.fbcdn.net/v/t1.15752-9/831614961_1631687198407856_4514807965908894122_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=9f807c&_nc_ohc=r-nA1wMlANoQ7kNvwE4Abic&_nc_oc=AdrvS2YFHkFJ9QzCG9gvS4_7_apySGSlbMcZrc74TvaVHFqtUvJMgLQ9jmuSWErv1xHq3-xVbdEOFQQrn5WTu7_n&_nc_zt=23&_nc_ht=scontent.fdel27-2.fna&_nc_ss=7b6a8&oh=03_Q7cD6gGk6Y_4LpantSeZ4RpiQfzeLWI0xSr5O_KgmABXrU4xBg&oe=6AE92ECB">
+            <div class="caption">A beautiful memory of Bharat 🤍</div>
+          </article>
+
+          <article class="polaroid">
+            <img class="memory-photo" src="https://scontent.fdel27-2.fna.fbcdn.net/v/t1.15752-9/829584918_2116468448970161_8728339986826366613_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=9f807c&_nc_ohc=XzvV0iSSR8cQ7kNvwFVfyB9&_nc_oc=AdoprshmSjsvpPaCkSWzbpEgRSgjBkvZ-62S6XIFslvTO_V6gQ4DXhvxsBtOr-HFbfRh9iW8RtVCPv-CUsKh9jOv&_nc_zt=23&_nc_ht=scontent.fdel27-2.fna&_nc_ss=7b6a8&oh=03_Q7cD6gEIXBHaIQ3-knKtld0REAuKmepq0F6eNCMeaUW5DGY8BA&oe=6AE947F6">
+            <div class="caption">The smile that makes every moment special ❤️</div>
+          </article>
+
+          <article class="polaroid">
+            <img class="memory-photo" src="https://scontent.fdel27-2.fna.fbcdn.net/v/t1.15752-9/831614936_1580202283384792_4141055806189371924_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=9f807c&_nc_ohc=V0Emabt12boQ7kNvwGrFau6&_nc_oc=AdrTrRSTwvxTkRpIEtkL1Kc_h4nsJv__0rMoi1s_YlLP4cqFa7VYyoaa4vuxe6yh_ibY83WSBFuDUILkamyEsIws&_nc_zt=23&_nc_ht=scontent.fdel27-2.fna&_nc_ss=7b6a8&oh=03_Q7cD6gGck93IsryUClI1aAw5xTpoK-l0PM6hrf4N5Wl2tCkoEw&oe=6AE92EF2">
+            <div class="caption">One more memory to keep forever 🌟</div>
+          </article>
+
+          <article class="polaroid">
+            <img class="memory-photo" src="https://scontent.fdel27-4.fna.fbcdn.net/v/t1.15752-9/837142063_3018371121848156_8742196490813485806_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=9f807c&_nc_ohc=pJI2hixYZ7oQ7kNvwErOJ19&_nc_oc=AdrMbQ0PA8120kgg5vGhp8TvPRGtjeJsUQwDa80qg8irxcolhHdjM9l_By6sk9HXRf6zyQqyknQy1DPcx9VTof82&_nc_zt=23&_nc_ht=scontent.fdel27-4.fna&_nc_ss=7b6a8&oh=03_Q7cD6gGjZG5NEHX_Jeac3UxYZlCr-wRSSulIEMj4yLbWYLFx3g&oe=6AE92832">
+            <div class="caption">Cheers to Bharat's 25th birthday 🎂</div>
+          </article>
+
+        </div>
+
+
+        <div
+          class="dots"
+          id="dots">
+
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+
+        </div>
+
+      </div>
+
+      <button
+        class="pill-btn"
+        id="memoryNext">
+        Keep going
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- SCREEN 6 -->
+
+  <section class="screen" id="s5">
+
+    <div class="inner">
+
+      <h2
+        class="title"
+        style="font-size:clamp(29px,6vw,52px)">
+
+        One last thing,
+        <span data-name>NAME</span>...
+
+      </h2>
+
+      <p class="subtitle">
+        <span data-sender>Shubham</span>
+        wrote you a letter.
+      </p>
+
+
+      <div
+        class="envelope"
+        id="envelope"
+        role="button"
+        tabindex="0"
+        aria-label="Open your letter">
+
+        <div class="env-body"></div>
+
+        <div class="flap"></div>
+
+        <div class="seal">
+          A
+        </div>
+
+      </div>
+
+
+      <div class="tap">
+        ☝ Tap to open your letter
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SCREEN 7 -->
+
+  <section class="screen" id="s6">
+
+    <div class="inner">
+
+      <article class="letter">
+
+        <h3>
+          Dear <span data-name>NAME</span>,
+        </h3>
+
+        <hr>
+
+        <p>
+          <strong>
+            Happy 25th Birthday ❤️ Bharat
+          </strong>
+        </p>
+
+        <p>
+          I still don't know how someone like you came into my life,
+          but I'm really thankful for it. I hope this year gives you
+          peace, good health and many little reasons to smile everyday 😊
+          You deserve all the happiness in the world 💕🎂
+        </p>
+
+        <div class="signature">
+
+          With all my love,
+
+          <br>
+
+          — <span data-sender>Shubham</span>
+
+        </div>
+
+      </article>
+
+
+      <div class="nav-row">
+
+        <button
+          class="pill-btn"
+          id="continue">
+
+          Continue
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FINAL SCREEN -->
+
+  <section class="screen final" id="s7">
+
+    <div class="inner">
+
+      <div class="kicker">
+        Made with a little bit of magic ✨
+      </div>
+
+      <h1 class="title">
+
+        Happy
+        <br>
+        Birthday
+
+      </h1>
+
+      <div
+        class="final-name script"
+        data-name>
+        NAME!
+      </div>
+
+      <p class="subtitle">
+        Cheers to 25 amazing years — and many more beautiful memories ahead. 🥂✨
+      </p>
+
+      <div class="nav-row">
+
+        <button
+          class="pill-btn"
+          id="restart">
+
+          Replay the surprise ↻
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div
+      class="firework"
+      style="left:18%;top:35%">
+
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+
+    </div>
+
+
+    <div
+      class="firework"
+      style="right:18%;top:28%;animation-delay:.6s">
+
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+
+    </div>
+
+
+    <div
+      class="firework"
+      style="left:50%;top:72%;animation-delay:1s">
+
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+
+    </div>
+
+  </section>
+
 </div>
 
 
-<!-- ================= PRODUCT 2 ================= -->
-<div class="col-12 col-sm-6 col-lg-3 product-item"
-     data-category="men">
-
-    <div class="product-card">
-        <div class="product-image">
-            <span class="product-badge sale-badge">SALE</span>
-
-            <button class="wishlist-btn" aria-label="Add to wishlist">
-                <i class="bi bi-heart"></i>
-            </button>
-
-               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCAd2isGkppuNGtBaA_PRX8SsfMVJeG73XUMwTCkNQpg&s"
-            alt="Red and white running shoes">
-        </div>
-
-        <div class="product-info">
-            <span class="product-category">Men's Running</span>
-            <h5>Velocity Pro Runner</h5>
-
-            <div class="product-rating">
-                <span>★★★★★</span>
-                <small>(4.6)</small>
-            </div>
-
-            <div class="product-price">
-                <strong>₹2,899</strong>
-                <del>₹4,199</del>
-                <span>31% OFF</span>
-            </div>
-
-            <button class="btn add-cart-btn"
-                    data-name="Velocity Pro Runner"
-                    data-price="2899">
-                <i class="bi bi-bag-plus me-2"></i>
-                Add to Cart
-            </button>
-        </div>
-    </div>
-</div>
-
-
-<!-- ================= PRODUCT 3 ================= -->
-<div class="col-12 col-sm-6 col-lg-3 product-item"
-     data-category="men">
-
-    <div class="product-card">
-        <div class="product-image">
-            <span class="product-badge sale-badge">SALE</span>
-
-            <button class="wishlist-btn" aria-label="Add to wishlist">
-                <i class="bi bi-heart"></i>
-            </button>
-
-            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=700&q=80"
-                 alt="Classic casual sneakers">
-        </div>
-
-        <div class="product-info">
-            <span class="product-category">Men's Casual</span>
-            <h5>Classic Street Low</h5>
-
-            <div class="product-rating">
-                <span>★★★★★</span>
-                <small>(4.5)</small>
-            </div>
-
-            <div class="product-price">
-                <strong>₹2,499</strong>
-                <del>₹3,499</del>
-                <span>29% OFF</span>
-            </div>
-
-            <button class="btn add-cart-btn"
-                    data-name="Classic Street Low"
-                    data-price="2499">
-                <i class="bi bi-bag-plus me-2"></i>
-                Add to Cart
-            </button>
-        </div>
-    </div>
-</div>
-
-
-<!-- ================= PRODUCT 4 ================= -->
-<div class="col-12 col-sm-6 col-lg-3 product-item"
-     data-category="men">
-
-    <div class="product-card">
-        <div class="product-image">
-            <span class="product-badge sale-badge">SALE</span>
-
-            <button class="wishlist-btn" aria-label="Add to wishlist">
-                <i class="bi bi-heart"></i>
-            </button>
-
-            <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=700&q=80"
-                 alt="Black and white high top sneakers">
-        </div>
-
-        <div class="product-info">
-            <span class="product-category">Men's Sneakers</span>
-            <h5>Urban High Top</h5>
-
-            <div class="product-rating">
-                <span>★★★★★</span>
-                <small>(4.7)</small>
-            </div>
-
-            <div class="product-price">
-                <strong>₹4,299</strong>
-                <del>₹5,999</del>
-                <span>28% OFF</span>
-            </div>
-
-            <button class="btn add-cart-btn"
-                    data-name="Urban High Top"
-                    data-price="4299">
-                <i class="bi bi-bag-plus me-2"></i>
-                Add to Cart
-            </button>
-        </div>
-    </div>
-</div>
-
-
-<!-- ================= PRODUCT 5 ================= -->
-<div class="col-12 col-sm-6 col-lg-3 product-item"
-     data-category="women">
-
-    <div class="product-card">
-        <div class="product-image">
-            <span class="product-badge sale-badge">SALE</span>
-
-            <button class="wishlist-btn" aria-label="Add to wishlist">
-                <i class="bi bi-heart"></i>
-            </button>
-
-            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=700&q=80"
-                 alt="Women's fashionable footwear">
-        </div>
-
-        <div class="product-info">
-            <span class="product-category">Women's Fashion</span>
-            <h5>Elegance Walk</h5>
-
-            <div class="product-rating">
-                <span>★★★★★</span>
-                <small>(4.6)</small>
-            </div>
-
-            <div class="product-price">
-                <strong>₹2,799</strong>
-                <del>₹3,999</del>
-                <span>30% OFF</span>
-            </div>
-
-            <button class="btn add-cart-btn"
-                    data-name="Elegance Walk"
-                    data-price="2799">
-                <i class="bi bi-bag-plus me-2"></i>
-                Add to Cart
-            </button>
-        </div>
-    </div>
-</div>
-
-
-<!-- ================= PRODUCT 6 ================= -->
-<div class="col-12 col-sm-6 col-lg-3 product-item"
-     data-category="women">
-
-    <div class="product-card">
-        <div class="product-image">
-            <span class="product-badge sale-badge">SALE</span>
-
-            <button class="wishlist-btn" aria-label="Add to wishlist">
-                <i class="bi bi-heart"></i>
-            </button>
-
-            <img src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=700&q=80"
-                 alt="Women's casual sneakers">
-        </div>
-
-        <div class="product-info">
-            <span class="product-category">Women's Sneakers</span>
-            <h5>Cloud Comfort</h5>
-
-            <div class="product-rating">
-                <span>★★★★★</span>
-                <small>(4.8)</small>
-            </div>
-
-            <div class="product-price">
-                <strong>₹3,199</strong>
-                <del>₹4,499</del>
-                <span>29% OFF</span>
-            </div>
-
-            <button class="btn add-cart-btn"
-                    data-name="Cloud Comfort"
-                    data-price="3199">
-                <i class="bi bi-bag-plus me-2"></i>
-                Add to Cart
-            </button>
-        </div>
-    </div>
-</div>
-
-
-<!-- ================= PRODUCT 7 ================= -->
-<div class="col-12 col-sm-6 col-lg-3 product-item"
-     data-category="sports">
-
-    <div class="product-card">
-        <div class="product-image">
-            <span class="product-badge sale-badge">SALE</span>
-
-            <button class="wishlist-btn" aria-label="Add to wishlist">
-                <i class="bi bi-heart"></i>
-            </button>
-
-            <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=700&q=80"
-                 alt="Athletic training sneakers">
-        </div>
-
-        <div class="product-info">
-            <span class="product-category">Sports Training</span>
-            <h5>Power Sprint X</h5>
-
-            <div class="product-rating">
-                <span>★★★★★</span>
-                <small>(4.9)</small>
-            </div>
-
-            <div class="product-price">
-                <strong>₹3,899</strong>
-                <del>₹5,499</del>
-                <span>29% OFF</span>
-            </div>
-
-            <button class="btn add-cart-btn"
-                    data-name="Power Sprint X"
-                    data-price="3899">
-                <i class="bi bi-bag-plus me-2"></i>
-                Add to Cart
-            </button>
-        </div>
-    </div>
-</div>
-
-
-<!-- ================= PRODUCT 8 ================= -->
-<div class="col-12 col-sm-6 col-lg-3 product-item"
-     data-category="sports">
-
-    <div class="product-card">
-        <div class="product-image">
-            <span class="product-badge sale-badge">SALE</span>
-
-            <button class="wishlist-btn" aria-label="Add to wishlist">
-                <i class="bi bi-heart"></i>
-            </button>
-
-            <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=700&q=80"
-                 alt="Performance running sneakers">
-        </div>
-
-        <div class="product-info">
-            <span class="product-category">Sports Running</span>
-            <h5>Flex Motion Runner</h5>
-
-            <div class="product-rating">
-                <span>★★★★★</span>
-                <small>(4.7)</small>
-            </div>
-
-            <div class="product-price">
-                <strong>₹3,599</strong>
-                <del>₹4,999</del>
-                <span>28% OFF</span>
-            </div>
-
-            <button class="btn add-cart-btn"
-                    data-name="Flex Motion Runner"
-                    data-price="3599">
-                <i class="bi bi-bag-plus me-2"></i>
-                Add to Cart
-            </button>
-        </div>
-    </div>
-</div>
-
-
-<!-- ================= PRODUCT 9 ================= -->
-<div class="col-12 col-sm-6 col-lg-3 product-item"
-     data-category="men">
-
-    <div class="product-card">
-        <div class="product-image">
-            <span class="product-badge sale-badge">SALE</span>
-
-            <button class="wishlist-btn" aria-label="Add to wishlist">
-                <i class="bi bi-heart"></i>
-            </button>
-
-            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=700&q=80"
-                 alt="Classic canvas sneakers">
-        </div>
-
-        <div class="product-info">
-            <span class="product-category">Men's Casual</span>
-            <h5>Canvas Classic</h5>
-
-            <div class="product-rating">
-                <span>★★★★★</span>
-                <small>(4.4)</small>
-            </div>
-
-            <div class="product-price">
-                <strong>₹1,999</strong>
-                <del>₹2,999</del>
-                <span>33% OFF</span>
-            </div>
-
-            <button class="btn add-cart-btn"
-                    data-name="Canvas Classic"
-                    data-price="1999">
-                <i class="bi bi-bag-plus me-2"></i>
-                Add to Cart
-            </button>
-        </div>
-    </div>
-</div>
-
-
-<!-- ================= PRODUCT 10 ================= -->
-<div class="col-12 col-sm-6 col-lg-3 product-item"
-     data-category="sports">
-
-    <div class="product-card">
-        <div class="product-image">
-            <span class="product-badge sale-badge">SALE</span>
-
-            <button class="wishlist-btn" aria-label="Add to wishlist">
-                <i class="bi bi-heart"></i>
-            </button>
-
-            <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&w=700&q=80"
-                 alt="Modern athletic sports shoes">
-        </div>
-
-        <div class="product-info">
-            <span class="product-category">Sports Sneakers</span>
-            <h5>Turbo Edge Pro</h5>
-
-            <div class="product-rating">
-                <span>★★★★★</span>
-                <small>(4.8)</small>
-            </div>
-
-            <div class="product-price">
-                <strong>₹4,499</strong>
-                <del>₹6,499</del>
-                <span>31% OFF</span>
-            </div>
-
-            <button class="btn add-cart-btn"
-                    data-name="Turbo Edge Pro"
-                    data-price="4499">
-                <i class="bi bi-bag-plus me-2"></i>
-                Add to Cart
-            </button>
-        </div>
-    </div>
-</div>
-
-
-
-<!-- ================= PRODUCT 11 ================= -->
-<div class="col-12 col-sm-6 col-lg-3 product-item"
-     data-category="men">
-
-    <div class="product-card">
-
-        <div class="product-image">
-            <span class="product-badge sale-badge">SALE</span>
-
-            <button class="wishlist-btn"
-                    aria-label="Add to wishlist">
-                <i class="bi bi-heart"></i>
-            </button>
-
-            <img
-                src="https://images.unsplash.com/photo-1520256862855-398228c41684?auto=format&fit=crop&w=700&q=80"
-                alt="Premium men's casual sneakers">
-        </div>
-
-        <div class="product-info">
-
-            <span class="product-category">Men's Sneakers</span>
-            <h5>Shadow Strike Pro</h5>
-
-            <div class="product-rating">
-                <span>★★★★★</span>
-                <small>(4.8)</small>
-            </div>
-
-            <div class="product-price">
-                <strong>₹3,799</strong>
-                <del>₹5,499</del>
-                <span>31% OFF</span>
-            </div>
-
-            <button class="btn add-cart-btn"
-                    data-name="Shadow Strike Pro"
-                    data-price="3799">
-                <i class="bi bi-bag-plus me-2"></i>
-                Add to Cart
-            </button>
-
-        </div>
-    </div>
-</div>
-
-
-<!-- ================= PRODUCT 12 ================= -->
-<div class="col-12 col-sm-6 col-lg-3 product-item"
-     data-category="sports">
-
-    <div class="product-card">
-
-        <div class="product-image">
-            <span class="product-badge sale-badge">SALE</span>
-
-            <button class="wishlist-btn"
-                    aria-label="Add to wishlist">
-                <i class="bi bi-heart"></i>
-            </button>
-
-            <img
-                src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&w=700&q=80"
-                alt="Modern sports running sneakers">
-        </div>
-
-        <div class="product-info">
-
-            <span class="product-category">Sports Running</span>
-            <h5>Velocity Max Pro</h5>
-
-            <div class="product-rating">
-                <span>★★★★★</span>
-                <small>(4.7)</small>
-            </div>
-
-            <div class="product-price">
-                <strong>₹4,199</strong>
-                <del>₹5,999</del>
-                <span>30% OFF</span>
-            </div>
-
-            <button class="btn add-cart-btn"
-                    data-name="Velocity Max Pro"
-                    data-price="4199">
-                <i class="bi bi-bag-plus me-2"></i>
-                Add to Cart
-            </button>
-
-        </div>
-    </div>
-</div>
-
-            <!-- Product 7 -->
-            <div class="col-12 col-sm-6 col-lg-3 product-item"
-                 data-category="men">
-
-                <div class="product-card">
-
-                    <div class="product-image">
-                        <span class="product-badge sale-badge">SALE</span>
-
-                        <button class="wishlist-btn"
-                                aria-label="Add to wishlist">
-                            <i class="bi bi-heart"></i>
-                        </button>
-
-                        <img
-                            src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=700&q=80"
-                            alt="Black and white street sneakers">
-                    </div>
-
-                    <div class="product-info">
-                        <span class="product-category">Men's Sneakers</span>
-                        <h5>Street Flex High Top</h5>
-
-                        <div class="product-rating">
-                            <span>★★★★★</span>
-                            <small>(4.7)</small>
-                        </div>
-
-                        <div class="product-price">
-                            <strong>₹4,299</strong>
-                            <del>₹5,999</del>
-                            <span>28% OFF</span>
-                        </div>
-
-                        <button class="btn add-cart-btn"
-                                data-name="Street Flex High Top"
-                                data-price="4299">
-                            <i class="bi bi-bag-plus me-2"></i>
-                            Add to Cart
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <!-- Product 8 -->
-            <div class="col-12 col-sm-6 col-lg-3 product-item"
-                 data-category="sports">
-
-                <div class="product-card">
-
-                    <div class="product-image">
-                        <span class="product-badge new-badge">NEW</span>
-
-                        <button class="wishlist-btn"
-                                aria-label="Add to wishlist">
-                            <i class="bi bi-heart"></i>
-                        </button>
-
-                        <img
-                            src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=700&q=80"
-                            alt="Lightweight running shoes">
-                    </div>
-
-                    <div class="product-info">
-                        <span class="product-category">Sports Collection</span>
-                        <h5>Air Sprint Max</h5>
-
-                        <div class="product-rating">
-                            <span>★★★★★</span>
-                            <small>(4.8)</small>
-                        </div>
-
-                        <div class="product-price">
-                            <strong>₹3,999</strong>
-                            <del>₹5,499</del>
-                            <span>27% OFF</span>
-                        </div>
-
-                        <button class="btn add-cart-btn"
-                                data-name="Air Sprint Max"
-                                data-price="3999">
-                            <i class="bi bi-bag-plus me-2"></i>
-                            Add to Cart
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Message displayed when search has no results -->
-        <div class="no-results text-center py-5" id="noResults">
-            <i class="bi bi-search"></i>
-            <h4>No shoes found</h4>
-            <p>Try searching with another name or category.</p>
-        </div>
-
-    </div>
-</section>
-
-
-<!-- ================= PROMO BANNER ================= -->
-
-<section class="promo-section" id="about">
-
-    <div class="container">
-        <div class="promo-banner">
-
-            <div class="promo-content">
-                <span class="section-tag">LIMITED TIME OFFER</span>
-
-                <h2>Up to 50% Off</h2>
-
-                <p>
-                    Upgrade your shoe game without breaking the bank.
-                    Shop selected styles before they're gone.
-                </p>
-
-                <a href="#shop" class="btn btn-gold">
-                    Shop the Sale
-                    <i class="bi bi-arrow-right ms-2"></i>
-                </a>
-            </div>
-
-            <div class="promo-image">
-                <img
-                    src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=900&q=85"
-                    alt="Exclusive sneaker collection">
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-<!-- ================= BRANDS ================= -->
-
-<section class="brands-section">
-    <div class="container">
-
-        <div class="section-heading text-center">
-            <span class="section-tag">OUR BRANDS</span>
-            <h2>Brands You Love</h2>
-            <p>Explore styles inspired by the world's leading footwear brands.</p>
-        </div>
-
-        <div class="row align-items-center justify-content-center
-                    text-center g-4 brand-list">
-
-            <div class="col-4 col-md-2">
-                <h3>NIKE</h3>
-            </div>
-
-            <div class="col-4 col-md-2">
-                <h3>adidas</h3>
-            </div>
-
-            <div class="col-4 col-md-2">
-                <h3>PUMA</h3>
-            </div>
-
-            <div class="col-4 col-md-2">
-                <h3>NB</h3>
-            </div>
-
-            <div class="col-4 col-md-2">
-                <h3>SKECHERS</h3>
-            </div>
-
-            <div class="col-4 col-md-2">
-                <h3>Reebok</h3>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-
-<!-- ================= NEWSLETTER ================= -->
-
-<section class="newsletter-section" id="contact">
-    <div class="container">
-
-        <div class="newsletter-box">
-
-            <div>
-                <span class="section-tag">STAY IN THE LOOP</span>
-                <h2>Join the SoleHub Family</h2>
-                <p>Get exclusive offers, new arrivals and more.</p>
-            </div>
-
-            <form class="newsletter-form" id="newsletterForm">
-                <input type="email"
-                       class="form-control"
-                       id="newsletterEmail"
-                       placeholder="Enter your email address"
-                       aria-label="Email address"
-                       required>
-
-                <button class="btn btn-gold" type="submit">
-                    Subscribe
-                    <i class="bi bi-arrow-right ms-2"></i>
-                </button>
-            </form>
-            <form class="newsletter-form" id="newsletterForm">
-                <input type="phone"
-                       class="form-control"
-                       id="newsletterEmail"
-                       placeholder="Enter your phone number"
-                       aria-label="Phone number"
-                       required>
-
-                <button class="btn btn-gold" type="submit">
-                    contact now
-                    <i class="bi bi-arrow-right ms-2"></i>
-                </button>
-            </form>
-
-        </div>
-
-    </div>
-</section>
-<!-- Developer Section -->
-<section class="developer-section" id="developer">
-    <div class="developer-card">
-
-        <!-- Add your photo path in src -->
-        <img
-            src="https://scontent.fdel27-6.fna.fbcdn.net/v/t1.15752-9/745235719_1024833313819276_1489256913287795012_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=9f807c&_nc_ohc=84rmTJGEC5IQ7kNvwEBihPE&_nc_oc=AdopNzCFIcDBOO3pya1dhG47znb2dwfzUAUyV2kBIdzHZrg1RyoFnNrd1i2sZKRDe57SeYfpAub_wH_ACCTipXlr&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fdel27-6.fna&_nc_ss=7a22e&oh=03_Q7cD6gG5gPQP9G0GPfai6CilW8GcEsaUQhmoRgoG8n9kInQqlA&oe=6AE03808"
-            alt="Developer Inam"
-            class="developer-img"
-        >
-
-        <div class="developer-info">
-            <p class="developer-label">MEET THE DEVELOPER</p>
-
-            <h2>Designed & Developed by</h2>
-
-            <h3>Inam</h3>
-
-            <p>
-                The creative mind behind SOLEHUB —
-                bringing style, comfort, and technology
-                together in one footwear shopping experience.
-            </p>
-        </div>
-
-    </div>
-</section>
-
-
-
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer class="footer-section">
-
-    <div class="container">
-
-        <div class="row g-4">
-
-            <div class="col-lg-4 col-md-6">
-                <a href="#home" class="footer-logo">
-                    Sole<span>Hub</span>
-                </a>
-
-                <p class="footer-description">
-                    Better Shoes. A Brighter You.
-                    Discover your perfect pair and walk with confidence.
-                </p>
-
-                <div class="social-links">
-                    <a href="#contact" aria-label="Facebook">
-                        <i class="bi bi-facebook"></i>
-                    </a>
-
-                    <a href="#contact" aria-label="Instagram">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-
-                    <a href="#contact" aria-label="Twitter">
-                        <i class="bi bi-twitter-x"></i>
-                    </a>
-
-                    <a href="#contact" aria-label="YouTube">
-                        <i class="bi bi-youtube"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-2 col-md-6">
-                <h5>Quick Links</h5>
-                <ul class="footer-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#shop">Shop</a></li>
-                    <li><a href="#categories">Categories</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="col-6 col-lg-3 col-md-6">
-                <h5>Customer Service</h5>
-                <ul class="footer-links">
-                    <li><a href="#contact">Shipping Policy</a></li>
-                    <li><a href="#contact">Returns & Refunds</a></li>
-                    <li><a href="#contact">Privacy Policy</a></li>
-                    <li><a href="#contact">FAQs</a></li>
-                    <li><a href="#contact">Help & Support</a></li>
-                </ul>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <h5>Contact Us</h5>
-
-                <ul class="footer-links">
-                    <li>
-                        <i class="bi bi-envelope me-2"></i>
-                        <a href="mailto:support@solehub.example">support@solehub.example</a>
-                    </li>
-
-                    <li>
-                        <i class="bi bi-telephone me-2"></i>
-                        <a href="tel:+917903563802">+91 7903563802</a>
-                    </li>
-
-                    <li>
-                        <i class="bi bi-geo-alt me-2"></i>
-                        New Delhi, India
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-
-        <hr class="footer-divider">        $env:Path += ";C:\Program Files\Git\cmd"
-
-        <div class="footer-bottom">
-            <p>
-                &copy; 2026 SoleHub. All rights reserved.
-            </p>
-
-            <p>
-                Designed with <i class="bi bi-heart-fill"></i> for shoe lovers.
-            </p>
-        </div>
-
-    </div>
-</footer>
-
-
-<!-- ================= CART TOAST ================= -->
-
-<div class="toast-container position-fixed bottom-0 end-0 p-3">
-    <div id="cartToast" class="toast text-bg-dark border-0"
-         role="status" aria-live="polite" aria-atomic="true">
-
-        <div class="d-flex">
-            <div class="toast-body" id="toastMessage">
-                Product added to cart!
-            </div>
-
-            <button type="button"
-                    class="btn-close btn-close-white me-2 m-auto"
-                    data-bs-dismiss="toast"
-                    aria-label="Close">
-            </button>
-        </div>
-    </div>
-</div>
+<script>
 
+/* =========================================================
+   CHANGE ONLY THIS:
+========================================================= */
+
+const CONFIG = {
+  name: "Bharat",
+  sender: "With Love"
+};
+
+/* ========================================================= */
+
+
+const $ = (s,root=document) =>
+  root.querySelector(s);
+
+const $$ = (s,root=document) =>
+  [...root.querySelectorAll(s)];
+
+
+const name =
+  (CONFIG.name || "NAME").trim() || "NAME";
+
+
+const sender =
+  CONFIG.sender === "YOUR NAME" || !CONFIG.sender
+    ? "Shubham"
+    : CONFIG.sender;
+
+
+$$("[data-name]").forEach(el => {
+
+  el.textContent =
+    el.classList.contains("final-name")
+      ? name + "!"
+      : name;
+
+});
+
+
+$$("[data-sender]").forEach(el => {
+
+  el.textContent = sender;
+
+});
+
+
+const screens = $$(".screen");
+
+let current = 0;
+
+
+function goTo(index){
+
+  index =
+    Math.max(
+      0,
+      Math.min(
+        screens.length - 1,
+        index
+      )
+    );
+
+
+  screens.forEach((s,i) => {
+
+    s.classList.toggle(
+      "active",
+      i === index
+    );
+
+  });
+
+
+  current = index;
+
+
+  $("#progressBar").style.width =
+    (index / (screens.length - 1) * 100) + "%";
+
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+
+  if(index === 7){
+
+    launchConfetti(150);
+
+  }
+
+}
+
+
+function flash(){
+
+  const f = $("#flash");
+
+  f.classList.remove("go");
+
+  void f.offsetWidth;
+
+  f.classList.add("go");
+
+}
+
+
+function launchConfetti(count=100){
+
+  const box = $("#confetti");
+
+
+  for(let i=0;i<count;i++){
+
+    const el =
+      document.createElement("span");
+
+    el.className = "conf";
+
+
+    el.style.left =
+      Math.random() * 100 + "vw";
+
+
+    el.style.top =
+      (-10 - Math.random()*30) + "px";
+
+
+    el.style.setProperty(
+      "--x",
+      ((Math.random()-.5)*40) + "vw"
+    );
+
+
+    el.style.animationDelay =
+      Math.random() * .9 + "s";
+
+
+    el.style.animationDuration =
+      (2.2 + Math.random()*2.2) + "s";
+
+
+    el.style.background =
+      [
+        "#ffd36d",
+        "#ff8fac",
+        "#9ee8ff",
+        "#d0a7ff",
+        "#fff2d0"
+      ][
+        Math.floor(Math.random()*5)
+      ];
+
+
+    el.style.transform =
+      `rotate(${Math.random()*360}deg)`;
+
+
+    box.appendChild(el);
+
+
+    setTimeout(
+      () => el.remove(),
+      5200
+    );
+
+  }
+
+}
+
+
+function makeStars(){
+
+  const box = $("#stars");
+
+
+  for(let i=0;i<100;i++){
+
+    const s =
+      document.createElement("span");
+
+    s.className = "star";
+
+
+    s.style.left =
+      Math.random()*100 + "%";
+
+
+    s.style.top =
+      Math.random()*100 + "%";
+
+
+    s.style.animationDelay =
+      Math.random()*3 + "s";
+
+
+    s.style.opacity =
+      .25 + Math.random()*.65;
+
+
+    box.appendChild(s);
+
+  }
+
+}
+
+
+makeStars();
+
+
+/* UNWRAP */
+
+$("#unwrap").addEventListener(
+  "click",
+  () => {
+
+    flash();
+
+    setTimeout(
+      () => goTo(1),
+      260
+    );
+
+  }
+);
+
+
+/* HEART PULL */
+
+let dragging = false;
+let startY = 0;
+let pulled = false;
+
+
+const rope = $("#rope");
+const stage = $("#pullStage");
+
+
+function pullStart(e){
+
+  dragging = true;
+
+  pulled = false;
+
+  startY =
+    e.clientY ??
+    e.touches?.[0]?.clientY ??
+    0;
+
+
+  rope.setPointerCapture?.(
+    e.pointerId
+  );
+
+}
+
+
+function pullMove(e){
+
+  if(!dragging) return;
+
+
+  const y =
+    e.clientY ??
+    e.touches?.[0]?.clientY ??
+    startY;
+
+
+  const dy =
+    Math.max(
+      0,
+      Math.min(
+        85,
+        y - startY
+      )
+    );
+
+
+  rope.style.transform =
+    `translateY(${dy}px)`;
+
+
+  if(dy > 48){
+
+    pulled = true;
+
+  }
+
+}
+
+
+function pullEnd(){
+
+  if(!dragging) return;
+
+
+  dragging = false;
+
+
+  const didPull = pulled;
+
+
+  rope.style.transform = "";
+
+
+  if(
+    didPull ||
+    rope.dataset.clicked === "1"
+  ){
+
+    flash();
+
+
+    setTimeout(
+      () => goTo(2),
+      280
+    );
+
+  }
+
+}
+
+
+rope.addEventListener(
+  "pointerdown",
+  pullStart
+);
+
+
+window.addEventListener(
+  "pointermove",
+  pullMove
+);
+
+
+window.addEventListener(
+  "pointerup",
+  pullEnd
+);
+
+
+$("#bigHeart").addEventListener(
+  "click",
+  () => {
+
+    rope.dataset.clicked = "1";
+
+    pullEnd();
+
+  }
+);
+
+
+/* CAKE */
+
+$("#cake").addEventListener(
+  "click",
+  () => {
+
+    launchConfetti(45);
+
+    flash();
+
+    setTimeout(
+      () => goTo(3),
+      400
+    );
+
+  }
+);
+
+
+/* BALLOONS */
+
+const reasons = $("#reasonList");
+
+const balloonNext =
+  $("#balloonNext");
+
+let popped = 0;
+
+
+$$(".balloon").forEach(
+  (b,i) => {
+
+    b.addEventListener(
+      "click",
+      () => {
+
+        if(
+          b.classList.contains("popped")
+        ) return;
+
+
+        b.classList.add("popped");
+
+        popped++;
+
+
+        const r =
+          document.createElement("div");
+
+
+        r.className = "reason";
+
+
+        r.style.animationDelay =
+          popped * .08 + "s";
+
+
+        r.innerHTML = `
+
+          <span class="tag">
+            REASON NO.${popped} 💗
+          </span>
+
+          <p>
+            ${b.dataset.reason}
+          </p>
+
+        `;
+
+
+        reasons.appendChild(r);
+
+
+        launchConfetti(18);
+
+
+        if(popped === 5){
+
+          balloonNext.classList.remove(
+            "hidden"
+          );
+
+        }
+
+      }
+    );
+
+  }
+);
+
+
+balloonNext.addEventListener(
+  "click",
+  () => goTo(4)
+);
+
+
+/* MEMORY */
+
+const rail =
+  $("#memoryRail");
+
+const dots =
+  $$(".dot");
+
+
+rail.addEventListener(
+  "scroll",
+  () => {
+
+    const idx =
+      Math.round(
+        rail.scrollLeft /
+        (rail.clientWidth * .78)
+      );
+
+
+    dots.forEach(
+      (d,i) => {
+
+        d.classList.toggle(
+          "active",
+          i === Math.min(2,idx)
+        );
+
+      }
+    );
+
+  }
+);
+
+
+$("#memoryNext").addEventListener(
+  "click",
+  () => goTo(5)
+);
+
+
+/* ENVELOPE */
+
+const env =
+  $("#envelope");
+
+
+function openEnvelope(){
+
+  if(
+    env.classList.contains("open")
+  ){
+
+    goTo(6);
+
+    return;
+
+  }
+
+
+  env.classList.add("open");
+
+
+  setTimeout(
+    () => goTo(6),
+    850
+  );
+
+}
+
+
+env.addEventListener(
+  "click",
+  openEnvelope
+);
+
+
+env.addEventListener(
+  "keydown",
+  e => {
+
+    if(
+      e.key === "Enter" ||
+      e.key === " "
+    ){
+
+      openEnvelope();
+
+    }
+
+  }
+);
+
+
+/* LETTER */
+
+$("#continue").addEventListener(
+  "click",
+  () => {
+
+    launchConfetti(180);
+
+    flash();
+
+    setTimeout(
+      () => goTo(7),
+      280
+    );
+
+  }
+);
+
+
+/* REPLAY */
+
+$("#restart").addEventListener(
+  "click",
+  () => location.reload()
+);
+
+
+/* AMBIENT TOUCH SPARKLES */
+
+document.addEventListener(
+  "pointerdown",
+  e => {
+
+    if(current === 7) return;
+
+
+    if(
+      e.target.closest(
+        "button,.balloon,.cake-wrap,.envelope,.pull-rope,.heart"
+      )
+    ) return;
+
+
+    const s =
+      document.createElement("span");
+
+
+    s.className = "sparkle";
+
+
+    s.style.left =
+      e.clientX + "px";
+
+
+    s.style.top =
+      e.clientY + "px";
+
+
+    s.style.position = "fixed";
+
+    s.style.zIndex = 40;
+
+
+    document.body.appendChild(s);
+
+
+    setTimeout(
+      () => s.remove(),
+      700
+    );
+
+  }
+);
+
+</script>
 
 </body>
 </html>
